@@ -21,28 +21,28 @@ try {
     function Get-ServerRunningState { return $false }
     [IO.File]::WriteAllLines($iniPath, @(
         "PublicName=Compat Test",
-        "Mods=\Other;\MinidoracatMiniMapCompatFor42;\CompanionDogs;\MinidoracatMiniMapFor42"
+        "Mods=\Other;\Horse;\MinidoracatMiniMapCompatFor42;\CompanionDogs;\MinidoracatMiniMapFor42"
     ), $encoding)
     Update-ServerIniMods -IniPath $iniPath
     $modsLine = [IO.File]::ReadAllLines($iniPath, $encoding) | Where-Object { $_ -match '^Mods=' }
-    Assert-True ($modsLine -eq "Mods=\Other;\MinidoracatMiniMapFor42;\CompanionDogs;\MinidoracatMiniMapCompatFor42") `
-        "Mods= 未依主 MOD -> CompanionDogs -> 相容包排序"
+    Assert-True ($modsLine -eq "Mods=\Other;\MinidoracatMiniMapFor42;\CompanionDogs;\Horse;\MinidoracatMiniMapCompatFor42") `
+        "Mods= 未依主 MOD -> CompanionDogs -> Horse -> 相容包排序"
 
     Update-ServerIniMods -IniPath $iniPath -Remove
     $modsLine = [IO.File]::ReadAllLines($iniPath, $encoding) | Where-Object { $_ -match '^Mods=' }
-    Assert-True ($modsLine -eq "Mods=\Other;\MinidoracatMiniMapFor42;\CompanionDogs") `
+    Assert-True ($modsLine -eq "Mods=\Other;\MinidoracatMiniMapFor42;\CompanionDogs;\Horse") `
         "卸載不應移除共用依賴"
 
     [IO.File]::WriteAllLines($iniPath, @(
         "PublicName=Compat Test",
-        "Mods=\Other;\MinidoracatMiniMapFor42;\CompanionDogs;\MinidoracatMiniMapCompatFor42"
+        "Mods=\Other;\MinidoracatMiniMapFor42;\CompanionDogs;\Horse;\MinidoracatMiniMapCompatFor42"
     ), $encoding)
     Update-ServerIniMods -IniPath $iniPath -Remove -RemoveUpstream
     $modsLine = [IO.File]::ReadAllLines($iniPath, $encoding) | Where-Object { $_ -match '^Mods=' }
     Assert-True ($modsLine -eq "Mods=\Other;\MinidoracatMiniMapFor42") `
-        "選擇移除 CompanionDogs 時仍必須保留主 MOD與其他 MOD"
+        "選擇移除上游 MOD 時仍必須保留主 MOD與其他 MOD"
 
-    # 鎖定互動路由：選 y 才呼叫 CompanionDogs 連結移除，並把同一選擇傳給伺服器流程。
+    # 鎖定互動路由：選 y 才呼叫兩個上游連結移除，並把同一選擇傳給伺服器流程。
     $removedLabels = @()
     $removeUpstreamAnswer = "y"
     $serverRemove = $false
@@ -59,6 +59,7 @@ try {
     }
     Dismount-Workshop
     Assert-True ($removedLabels -contains "CompanionDogs") "選 y 未移除 CompanionDogs 連結"
+    Assert-True ($removedLabels -contains "Horse") "選 y 未移除 Horse 連結"
     Assert-True ($serverRemove -and $serverRemoveUpstream) "選 y 未傳遞伺服器移除選項"
 
     $removedLabels = @()
@@ -66,7 +67,8 @@ try {
     $serverRemoveUpstream = $true
     Dismount-Workshop
     Assert-True ($removedLabels -notcontains "CompanionDogs") "選 N 不應移除 CompanionDogs 連結"
-    Assert-True (-not $serverRemoveUpstream) "選 N 不應移除伺服器 CompanionDogs ID"
+    Assert-True ($removedLabels -notcontains "Horse") "選 N 不應移除 Horse 連結"
+    Assert-True (-not $serverRemoveUpstream) "選 N 不應移除伺服器上游 MOD ID"
 
     $before = [IO.File]::ReadAllText($iniPath, $encoding)
     function Get-ServerRunningState { return $true }
@@ -74,7 +76,7 @@ try {
     $after = [IO.File]::ReadAllText($iniPath, $encoding)
     Assert-True ($after -eq $before) "GameServer 執行中不應寫入 ini"
 
-    Write-Output "link workshop: order/remove/optional-upstream/running-guard cases passed"
+    Write-Output "link workshop: order/remove/optional-upstreams/running-guard cases passed"
 } finally {
     $env:PROJECT_ROOT = $oldProjectRoot
     $env:MINIDORACAT_LINK_WORKSHOP_TEST_ONLY = $oldTestOnly

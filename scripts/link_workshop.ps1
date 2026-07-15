@@ -23,11 +23,13 @@ $ModsLink = Join-Path $ModsDir $ModId
 # no-steam 客戶端／伺服器不掃 Workshop：缺少時補上開發版主 MOD與 Workshop 上游 MOD。
 $CoreModSource = "D:\github\MinidoracatMiniMapFor42\MOD\MinidoracatMiniMapFor42\Contents\mods\MinidoracatMiniMapFor42"
 $CoreModLink = Join-Path $ModsDir "MinidoracatMiniMapFor42"
-$UpstreamModSource = "D:\SteamLibrary\steamapps\workshop\content\108600\3740052292\mods\CompanionDogs"
-$UpstreamModLink = Join-Path $ModsDir "CompanionDogs"
+$CompanionDogsSource = "D:\SteamLibrary\steamapps\workshop\content\108600\3740052292\mods\CompanionDogs"
+$CompanionDogsLink = Join-Path $ModsDir "CompanionDogs"
+$HorseSource = "D:\SteamLibrary\steamapps\workshop\content\108600\3661336777\mods\HorseMod"
+$HorseLink = Join-Path $ModsDir "Horse"
 
 $ServerIniDir = Join-Path $env:UserProfile "Zomboid\Server"
-$ServerModIds = @("MinidoracatMiniMapFor42", "CompanionDogs", $ModId)
+$ServerModIds = @("MinidoracatMiniMapFor42", "CompanionDogs", "Horse", $ModId)
 $ServerModIdsOwn = @($ModId)
 
 if (-not (Test-Path -LiteralPath (Join-Path $ModContent "42\mod.info"))) {
@@ -205,14 +207,14 @@ function Update-ServerIniMods {
 
     if ($Remove) {
         $removeIds = @($ServerModIdsOwn)
-        if ($RemoveUpstream) { $removeIds += "CompanionDogs" }
+        if ($RemoveUpstream) { $removeIds += "CompanionDogs", "Horse" }
         $updated = @($current | Where-Object { $removeIds -notcontains $_.TrimStart('\') })
     } else {
         $prefix = '\'
         if ($current.Count -gt 0 -and @($current | Where-Object { $_.StartsWith('\') }).Count -eq 0) {
             $prefix = ''
         }
-        # 先移除三個目標 ID 的舊位置／錯誤大小寫，再以固定順序追加。
+        # 先移除四個目標 ID 的舊位置／錯誤大小寫，再以固定順序追加。
         $updated = @($current | Where-Object { $ServerModIds -notcontains $_.TrimStart('\') })
         foreach ($id in $ServerModIds) { $updated += "$prefix$id" }
     }
@@ -238,12 +240,12 @@ function Invoke-ServerIniPrompt {
     param([switch]$Remove, [switch]$RemoveUpstream)
     $question = if ($Remove) {
         if ($RemoveUpstream) {
-            "是否從 no-steam 伺服器 Mods= 移除本相容包與 CompanionDogs？(y/N)"
+            "是否從 no-steam 伺服器 Mods= 移除本相容包與 CompanionDogs、Horse？(y/N)"
         } else {
             "是否從 no-steam 伺服器 Mods= 移除本相容包？(y/N)"
         }
     } else {
-        "是否把主 MOD、CompanionDogs、本相容包依序加入 no-steam 伺服器 Mods=？(y/N)"
+        "是否把主 MOD、CompanionDogs、Horse、本相容包依序加入 no-steam 伺服器 Mods=？(y/N)"
     }
     if ((Read-Host $question) -notmatch '^[Yy]') { return }
     $ini = Select-ServerIni
@@ -257,9 +259,10 @@ function Mount-Workshop {
     $ownWorkshop = New-ManagedLink -LinkPath $WorkshopLink -Target $ModSource -Label "Workshop"
     $ownMods = New-ManagedLink -LinkPath $ModsLink -Target $ModContent -Label "相容包"
     $core = New-ManagedLink -LinkPath $CoreModLink -Target $CoreModSource -Label "主MOD"
-    $upstream = New-ManagedLink -LinkPath $UpstreamModLink -Target $UpstreamModSource -Label "CompanionDogs"
+    $dogs = New-ManagedLink -LinkPath $CompanionDogsLink -Target $CompanionDogsSource -Label "CompanionDogs"
+    $horse = New-ManagedLink -LinkPath $HorseLink -Target $HorseSource -Label "Horse"
     Write-Host ""
-    if ($ownWorkshop -and $ownMods -and $core -and $upstream) {
+    if ($ownWorkshop -and $ownMods -and $core -and $dogs -and $horse) {
         Write-Host "[完成] Workshop 與 no-steam mods 依賴已可見" -ForegroundColor Green
         Invoke-ServerIniPrompt
     } else {
@@ -271,11 +274,13 @@ function Dismount-Workshop {
     Write-Host ""
     Remove-ManagedLink -LinkPath $WorkshopLink -Label "Workshop"
     Remove-ManagedLink -LinkPath $ModsLink -Label "相容包"
-    $removeUpstream = (Read-Host "是否一併移除 CompanionDogs 的 mods 連結？(y/N)") -match '^[Yy]'
+    $removeUpstream = (Read-Host "是否一併移除 CompanionDogs 與 Horse 的 mods 連結？(y/N)") -match '^[Yy]'
     if ($removeUpstream) {
-        Remove-ManagedLink -LinkPath $UpstreamModLink -Label "CompanionDogs"
+        Remove-ManagedLink -LinkPath $CompanionDogsLink -Label "CompanionDogs"
+        Remove-ManagedLink -LinkPath $HorseLink -Label "Horse"
     } else {
         Write-Host "  [保留] CompanionDogs" -ForegroundColor DarkGray
+        Write-Host "  [保留] Horse" -ForegroundColor DarkGray
     }
     Write-Host "  [保留] 主 MOD" -ForegroundColor DarkGray
     Write-Host ""
@@ -287,7 +292,8 @@ function Show-Status {
     Show-LinkStatus -LinkPath $WorkshopLink -Label "Workshop"
     Show-LinkStatus -LinkPath $ModsLink -Label "相容包"
     Show-LinkStatus -LinkPath $CoreModLink -Label "主MOD"
-    Show-LinkStatus -LinkPath $UpstreamModLink -Label "CompanionDogs"
+    Show-LinkStatus -LinkPath $CompanionDogsLink -Label "CompanionDogs"
+    Show-LinkStatus -LinkPath $HorseLink -Label "Horse"
     Write-Host ""
 }
 
@@ -300,7 +306,7 @@ while ($true) {
     Write-Host "  $ModId 連結管理" -ForegroundColor Cyan
     Write-Host "============================================" -ForegroundColor Cyan
     Write-Host "  [1] 掛載 Workshop + mods + 缺少的依賴"
-    Write-Host "  [2] 卸載本相容包（可選擇一併移除 CompanionDogs）"
+    Write-Host "  [2] 卸載本相容包（可選擇一併移除 CompanionDogs 與 Horse）"
     Write-Host "  [3] 查看目前狀態"
     Write-Host "  [Q] 離開"
     Write-Host ""

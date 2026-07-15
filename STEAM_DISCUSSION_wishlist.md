@@ -12,10 +12,12 @@
 [*] 已知的 Mod ID／物件 group（選填）
 [/list]
 
-[h2]✅ 目前支援（v0.1.0）[/h2]
+[h2]✅ 目前支援[/h2]
 [list]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs [ALPHA][/url]——
-將 [b]dog[/b] 群組加入動物物種篩選，使用遊戲原版爪印圖標
+將 [b]dog[/b] 群組加入動物物種篩選，提供原版爪印符號與本包彩色狗圖
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url]——
+將 [b]horse[/b] 群組加入動物物種篩選，提供本包馬頭符號與彩色馬圖
 [/list]
 
 [h2]🔎 評估原則[/h2]
@@ -36,8 +38,9 @@ is helpful when known. Support uses safely identifiable vanilla-synced data and 
 repackage third-party code or assets. If an upstream API or permission is required, implementation
 will wait for the original author's cooperation.
 
-[b]Currently supported:[/b] Companion Dogs [ALPHA] — adds the [b]dog[/b] group to the animal species
-filter using the vanilla paw-print icon.
+[b]Currently supported:[/b] Companion Dogs [ALPHA] — adds the [b]dog[/b] group with the vanilla
+paw-print symbol and this pack's colored dog icon. Horse Mod — adds the [b]horse[/b] group with this
+pack's horse-head symbol and colored horse icon.
 
 [hr][/hr]
 
@@ -47,5 +50,6 @@ filter using the vanilla paw-print icon.
 既知の Mod ID や object group もあると調査に役立ちます。安全に識別できるゲーム標準の同期データを
 優先し、第三者のコードや素材は複製しません。上流 API や許可が必要な場合は、原作者の協力を待ちます。
 
-[b]現在対応：[/b]Companion Dogs [ALPHA] — [b]dog[/b] グループを動物種別フィルターに追加し、
-ゲーム標準の足跡アイコンを使用します。
+[b]現在対応：[/b]Companion Dogs [ALPHA] — [b]dog[/b] グループに標準の足跡シンボルと
+本パックのカラー犬アイコンを追加。Horse Mod — [b]horse[/b] グループに本パックの馬頭シンボルと
+カラー馬アイコンを追加します。
