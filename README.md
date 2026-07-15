@@ -1,0 +1,73 @@
+# Minidoracat MiniMap - MOD Compatibility for B42
+
+**By Minidoracat**
+
+[Minidoracat MiniMap for B42](../MinidoracatMiniMapFor42) 的第三方 MOD 相容包。
+每個 adapter 只把已確認的原版物件群組登記到主 MOD 的公開 API，提供有名稱、可個別開關的
+物種篩選項；不複製第三方程式或素材，也不接管第三方 MOD 自己的地圖標記。
+
+## 目前支援
+
+| 第三方 MOD | Workshop | Mod ID | 提供的相容功能 |
+| --- | --- | --- | --- |
+| Companion Dogs [ALPHA] | [3740052292](https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292) | `CompanionDogs` | 將 `dog` 加入主 MOD 動物物種篩選，圖標使用遊戲原版爪印 |
+
+### Companion Dogs 的顯示行為
+
+- Companion Dogs 原本的 active／passive companion marker 保持不變。
+- 主 MOD 的野生／畜養動物圖標預設關閉，因此預設不會多畫一層泛用狗圖標。
+- 玩家若開啟主 MOD 的畜養動物圖標，附近已載入且 `group=dog` 的狗會使用原版爪印顯示。
+- 主 MOD 原本就會以爪印備援未知群組；本相容包新增的是經驗證的「狗」名稱與獨立篩選開關。
+- 若只想保留 Companion Dogs 自己的 marker，可在主 MOD「動物圖標」物種篩選取消「狗」。
+- `dog` 同時可能包含 companion 與 stray，因此本相容包不會擅自隱藏整個群組。
+
+## 安裝與依賴
+
+- 必要：`MinidoracatMiniMapFor42`（`mod.info` 以 `require=` 保證先載入）。
+- 選用：`CompanionDogs`。未啟用時本相容包安靜 no-op，不新增「狗」選項、不產生錯誤。
+- Build 42.19.0+；單機與多人皆可用。多人伺服器需啟用主 MOD、第三方 MOD與本相容包。
+- no-steam 本機伺服器的 `Mods=` 順序：
+  `MinidoracatMiniMapFor42;CompanionDogs;MinidoracatMiniMapCompatFor42`。
+- `link_workshop.bat` 卸載時可選擇一併移除 `CompanionDogs` 的 mods 連結與伺服器 ID；
+  主 MOD與其他伺服器 MOD不會被移除。
+
+## 為什麼獨立專案
+
+主 MOD 維持通用的地圖與 `IsoAnimal` 顯示能力；第三方 MOD 的名稱、群組、測試與相容說明集中在
+本專案。未來某個第三方 MOD 更新或移除時，可以單獨調整 adapter，不必把第三方耦合帶進
+主 MOD。相容包本身仍保持資料導向：目前不需要 callback、provider、額外繪製 hook 或素材系統。
+
+## 專案結構
+
+```text
+MinidoracatMiniMapCompatFor42/
+├── STEAM_DESCRIPTION*.md
+├── STEAM_DISCUSSION_wishlist.md
+├── link_workshop.bat
+├── PZ_Test.bat
+├── scripts/
+│   ├── link_workshop.ps1
+│   ├── PZ_Test.ps1
+│   └── test_companion_dogs_compat.lua
+└── MOD/MinidoracatMiniMapCompatFor42/Contents/mods/MinidoracatMiniMapCompatFor42/42/
+    ├── mod.info
+    └── media/lua/
+        ├── client/MinidoracatMiniMapCompat.lua
+        └── shared/Translate/{CH,CN,EN,JP}/UI.json
+```
+
+## 測試
+
+```powershell
+luac -p MOD/MinidoracatMiniMapCompatFor42/Contents/mods/MinidoracatMiniMapCompatFor42/42/media/lua/client/MinidoracatMiniMapCompat.lua
+lua scripts/test_companion_dogs_compat.lua
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/test_link_workshop.ps1
+python D:/github/MinidoracatMiniMapFor42/scripts/check_lua_bindings.py MOD/MinidoracatMiniMapCompatFor42/Contents/mods/MinidoracatMiniMapCompatFor42/42/media/lua/client/MinidoracatMiniMapCompat.lua
+```
+
+遊戲內測試前先執行 `link_workshop.bat`，再執行 `PZ_Test.bat`。Lua／翻譯改動後必須重啟遊戲。
+
+## 授權
+
+本專案自有程式碼與設定以 [MIT License](LICENSE) 釋出。Companion Dogs 的程式與素材不包含在
+本專案內，權利與使用規範屬其原作者。

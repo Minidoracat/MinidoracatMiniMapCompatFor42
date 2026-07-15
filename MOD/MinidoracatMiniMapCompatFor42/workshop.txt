@@ -1,0 +1,57 @@
+version=1
+id=3765182411
+title=Minidoracat MiniMap - MOD Compatibility for B42
+description=[h1]🧩 Minidoracat MiniMap - MOD Compatibility for B42[/h1]
+description=[h3]By Minidoracat[/h3]
+description=
+description=[hr][/hr]
+description=
+description=[h2]✨ What is this?[/h2]
+description=A third-party MOD [b]compatibility pack[/b] for [b]Minidoracat MiniMap for B42[/b].
+description=When a supported MOD is enabled, this pack adds its verified animal group to the main MOD's
+description=species filter as a named compatibility entry with its own toggle.
+description=[list]
+description=[*] Quietly does nothing when the corresponding third-party MOD is not enabled
+description=[*] Uses vanilla map assets; it does not copy or repackage third-party code, models, textures, or sounds
+description=[*] Does not replace third-party markers; each compatibility icon can be disabled in the main MOD's species filter
+description=[/list]
+description=
+description=[h2]🐕 Currently supported[/h2]
+description=[list]
+description=[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs [ALPHA][/url] (Mod ID: [b]CompanionDogs[/b])
+description=[/list]
+description=
+description=With Companion Dogs enabled, “Dogs (loaded nearby)” appears in the main MOD's animal species
+description=filter. When the main MOD's animal icons are enabled, nearby loaded animals in the [b]dog[/b] group
+description=use the vanilla paw-print icon. The main MOD already uses paw prints for unknown groups; this pack
+description=adds the verified Dogs label and a dedicated toggle.
+description=
+description=[b]Important:[/b] Companion Dogs' own active/passive companion markers continue to work normally.
+description=Animal icons in the main MOD are off by default, so generic icons are not added by default. If you
+description=enable them but only want the upstream markers, untick “Dogs” in the main MOD's animal filter.
+description=
+description=[h2]📋 MOD information[/h2]
+description=[list]
+description=[*] [b]Mod ID:[/b] MinidoracatMiniMapCompatFor42
+description=[*] [b]Required:[/b] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]Minidoracat MiniMap for B42[/url]
+description=[*] [b]Optional:[/b] Companion Dogs; this pack safely no-ops when it is absent
+description=[*] [b]Supported version:[/b] Build 42.19.0+
+description=[*] Singleplayer and multiplayer (servers must enable the main MOD, the third-party MOD, and this pack)
+description=[/list]
+description=
+description=[h2]💡 Want another MOD supported?[/h2]
+description=Post the third-party MOD's Workshop link and the object type you want displayed in the [url=https://steamcommunity.com/workshop/filedetails/discussion/3765182411/574921459914281992/]Compatibility Requests discussion[/url].
+description=Support depends on whether the MOD exposes safely identifiable vanilla object data and on its license
+description=and compatibility boundaries.
+description=
+description=[h2]💬 Support & community[/h2]
+description=[url=https://discord.gg/Gur2V67]👉 Join the Discord server[/url]
+description=
+description=[h2]📺 Follow the author[/h2]
+description=[url=https://www.twitch.tv/minidoracat]🎬 Twitch channel[/url]
+description=
+description=[b]#compatibility #map #minimap #worldmap #Minidoracat[/b]
+description=
+description=Mod ID: MinidoracatMiniMapCompatFor42
+tags=Build 42;Interface;Map;Multiplayer
+visibility=public

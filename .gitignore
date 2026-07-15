@@ -1,0 +1,24 @@
+# AI / 本機工具狀態
+.claude/
+.agents/
+.codex/
+.omc/
+.omx/
+.gitnexus/
+.code-review-graph/
+.mcp.json
+CLAUDE.md
+AGENTS.md
+
+# 作業系統 / IDE
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 暫存與測試產物
+temp/
+*.log

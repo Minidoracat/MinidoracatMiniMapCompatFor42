@@ -1,0 +1,7 @@
+name=Minidoracat MiniMap - MOD Compatibility for B42
+id=MinidoracatMiniMapCompatFor42
+description=[B42] Minidoracat MiniMap 的第三方 MOD 相容包。啟用受支援 MOD 時，將其已確認的動物群組加入主 MOD 物種篩選；不複製第三方程式或素材。首批支援 Companion Dogs。By Minidoracat
+poster=poster.png
+require=MinidoracatMiniMapFor42
+modversion=42.19.0-0.1.0
+versionMin=42.19.0
