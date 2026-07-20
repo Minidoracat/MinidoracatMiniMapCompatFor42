@@ -35,6 +35,14 @@ Horse Mod が有効な場合、「馬（周辺で読み込み済み）」が種�
 [b]マルチプレイについて：[/b]互換パック自体はマルチで使用できますが、Horse Mod は現在
 [b]MP SOON[/b] と表示され、騎乗はまだマルチ非対応と明記されています。本機能はその制限を変更・回避しません。
 
+[h2]🔗 シリーズ MOD[/h2]
+[list]
+[*] [b]本体 MOD（必須）[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]Minidoracat MiniMap for B42[/url]——地図画像化の本体
+[*] [b]このページ[/b]：MOD Compatibility——サードパーティ MOD 互換パック
+[*] [b]任意[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763914102]MOD Maps[/url]——マップ MOD 用マップパック addon
+[*] [b]任意[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3768276209]Zones[/url]——サーバーカスタムゾーン表示
+[/list]
+
 [h2]📋 MOD 情報[/h2]
 [list]
 [*] [b]Mod ID:[/b] MinidoracatMiniMapCompatFor42

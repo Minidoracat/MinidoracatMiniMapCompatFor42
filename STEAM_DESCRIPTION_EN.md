@@ -36,6 +36,14 @@ only displays them; it does not change spawning, AI, equipment, riding, or inclu
 currently labelled [b]MP SOON[/b] and its description states that riding is not yet supported in MP.
 This compatibility feature does not change or bypass those upstream limitations.
 
+[h2]🔗 MOD series[/h2]
+[list]
+[*] [b]Main MOD (required)[/b]: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]Minidoracat MiniMap for B42[/url] — the image-based map core
+[*] [b]This page[/b]: MOD Compatibility — third-party compatibility pack
+[*] [b]Optional[/b]: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763914102]MOD Maps[/url] — map pack addon for map MODs
+[*] [b]Optional[/b]: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3768276209]Zones[/url] — server custom-zone display
+[/list]
+
 [h2]📋 MOD information[/h2]
 [list]
 [*] [b]Mod ID:[/b] MinidoracatMiniMapCompatFor42

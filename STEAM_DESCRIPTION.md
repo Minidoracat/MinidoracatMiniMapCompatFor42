@@ -34,6 +34,14 @@ Horse Mod 啟用時，「馬（附近已載入）」會出現在物種篩選；�
 [b]多人注意：[/b]相容包可在多人使用，但 Horse Mod 目前標示 [b]MP SOON[/b]，且上游說明
 明載騎乘尚未支援多人。本相容功能不會改變或繞過 Horse Mod 的多人限制。
 
+[h2]🔗 系列 MOD[/h2]
+[list]
+[*] [b]主 MOD（必裝）[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]Minidoracat MiniMap for B42[/url]——地圖圖片化本體
+[*] [b]本頁[/b]：MOD Compatibility——第三方 MOD 相容包
+[*] [b]選裝[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763914102]MOD Maps[/url]——地圖 MOD 圖像包
+[*] [b]選裝[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3768276209]Zones[/url]——伺服器自訂區域顯示
+[/list]
+
 [h2]📋 MOD 資訊[/h2]
 [list]
 [*] [b]Mod ID:[/b] MinidoracatMiniMapCompatFor42

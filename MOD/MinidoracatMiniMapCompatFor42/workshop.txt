@@ -38,6 +38,14 @@ description=[b]Multiplayer note:[/b] The compatibility pack itself can run in mu
 description=currently labelled [b]MP SOON[/b] and its description states that riding is not yet supported in MP.
 description=This compatibility feature does not change or bypass those upstream limitations.
 description=
+description=[h2]🔗 MOD series[/h2]
+description=[list]
+description=[*] [b]Main MOD (required)[/b]: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]Minidoracat MiniMap for B42[/url] — the image-based map core
+description=[*] [b]This page[/b]: MOD Compatibility — third-party compatibility pack
+description=[*] [b]Optional[/b]: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763914102]MOD Maps[/url] — map pack addon for map MODs
+description=[*] [b]Optional[/b]: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3768276209]Zones[/url] — server custom-zone display
+description=[/list]
+description=
 description=[h2]📋 MOD information[/h2]
 description=[list]
 description=[*] [b]Mod ID:[/b] MinidoracatMiniMapCompatFor42
@@ -65,6 +73,7 @@ description=[url=https://www.twitch.tv/minidoracat]🎬 Twitch channel[/url]
 description=
 description=[b]#compatibility #map #minimap #worldmap #Minidoracat[/b]
 description=
+description=Workshop ID: 3765182411
 description=Mod ID: MinidoracatMiniMapCompatFor42
 tags=Build 42;Interface;Map;Multiplayer
 visibility=public
