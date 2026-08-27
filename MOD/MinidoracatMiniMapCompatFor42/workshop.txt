@@ -68,9 +68,6 @@ description=
 description=[h2]💬 Support & community[/h2]
 description=[url=https://discord.gg/Gur2V67]👉 Join the Discord server[/url]
 description=
-description=[h2]📺 Follow the author[/h2]
-description=[url=https://www.twitch.tv/minidoracat]🎬 Twitch channel[/url]
-description=
 description=[b]#compatibility #map #minimap #worldmap #Minidoracat[/b]
 description=
 description=Workshop ID: 3765182411

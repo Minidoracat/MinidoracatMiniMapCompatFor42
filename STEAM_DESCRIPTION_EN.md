@@ -66,9 +66,6 @@ and compatibility boundaries.
 [h2]💬 Support & community[/h2]
 [url=https://discord.gg/Gur2V67]👉 Join the Discord server[/url]
 
-[h2]📺 Follow the author[/h2]
-[url=https://www.twitch.tv/minidoracat]🎬 Twitch channel[/url]
-
 [b]#compatibility #map #minimap #worldmap #Minidoracat[/b]
 
 Workshop ID: 3765182411
