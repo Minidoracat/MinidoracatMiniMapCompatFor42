@@ -39,8 +39,7 @@
 - Build 42.19.0+；單機與多人皆可用。多人伺服器需啟用主 MOD、第三方 MOD與本相容包。
 - no-steam 本機伺服器的 `Mods=` 順序：
   `MinidoracatMiniMapFor42;CompanionDogs;Horse;MinidoracatMiniMapCompatFor42`。
-- `link_workshop.bat` 卸載時可選擇一併移除 `CompanionDogs`、`Horse` 的 mods 連結與伺服器 ID；
-  主 MOD與其他伺服器 MOD不會被移除。
+- `link_workshop.bat` 卸載只歸檔本相容包的受管副本，不移除主 MOD、CompanionDogs、Horse 或其他 MOD。
 
 ## 為什麼獨立專案
 
@@ -76,11 +75,10 @@ MinidoracatMiniMapCompatFor42/
 ```powershell
 luac -p MOD/MinidoracatMiniMapCompatFor42/Contents/mods/MinidoracatMiniMapCompatFor42/42/media/lua/client/MinidoracatMiniMapCompat.lua
 lua scripts/test_companion_dogs_compat.lua
-powershell -NoProfile -ExecutionPolicy Bypass -File scripts/test_link_workshop.ps1
 python D:/github/MinidoracatMiniMapFor42/scripts/check_lua_bindings.py MOD/MinidoracatMiniMapCompatFor42/Contents/mods/MinidoracatMiniMapCompatFor42/42/media/lua/client/MinidoracatMiniMapCompat.lua
 ```
 
-遊戲內測試前先執行 `link_workshop.bat`，再執行 `PZ_Test.bat`。Lua／翻譯改動後必須重啟遊戲。
+日常用 `PZ_Test.bat`，自動同步本包與家族依賴後才啟動；首次設定與資料保護見 `../pz-family-docs/tools.md`。Lua／翻譯改動後仍須重啟遊戲。工具回歸改用家族 `scripts/test_sync_mod.ps1`，不沿用舊連結專屬 API 測試。
 
 ### 發布到 Workshop
 
