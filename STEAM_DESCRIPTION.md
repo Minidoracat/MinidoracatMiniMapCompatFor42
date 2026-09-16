@@ -62,6 +62,10 @@ Horse Mod 啟用時，「馬（附近已載入）」會出現在物種篩選；�
 [h2]💬 問題回報 & 交流[/h2]
 [url=https://discord.gg/Gur2V67]👉 點此加入 Discord 伺服器[/url]
 
+[h2]☕ 支持作者[/h2]
+MOD 永遠免費。喜歡的話可以請我喝杯咖啡，贊助會用在伺服器與 MOD 開發上。原始碼公開在 GitHub。
+[url=https://ko-fi.com/minidoracat][img]https://raw.githubusercontent.com/Minidoracat/workshop-resources/refs/heads/main/badges/badge_kofi.png[/img][/url] [url=https://github.com/Minidoracat/MinidoracatMiniMapCompatFor42][img]https://raw.githubusercontent.com/Minidoracat/workshop-resources/refs/heads/main/badges/badge_github.png[/img][/url]
+
 [b]#相容 #地圖 #小地圖 #minimap #worldmap #Minidoracat[/b]
 
 Workshop ID: 3765182411

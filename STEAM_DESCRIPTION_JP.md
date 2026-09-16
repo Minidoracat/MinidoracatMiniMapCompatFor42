@@ -63,6 +63,10 @@ Horse Mod が有効な場合、「馬（周辺で読み込み済み）」が種�
 [h2]💬 サポート & コミュニティ[/h2]
 [url=https://discord.gg/Gur2V67]👉 Discord サーバーに参加[/url]
 
+[h2]☕ 作者を応援[/h2]
+この MOD は今後もずっと無料です。気に入ったらコーヒーを一杯おごってください。支援はサーバーと MOD 開発に使います。ソースは GitHub で公開しています。
+[url=https://ko-fi.com/minidoracat][img]https://raw.githubusercontent.com/Minidoracat/workshop-resources/refs/heads/main/badges/badge_kofi.png[/img][/url] [url=https://github.com/Minidoracat/MinidoracatMiniMapCompatFor42][img]https://raw.githubusercontent.com/Minidoracat/workshop-resources/refs/heads/main/badges/badge_github.png[/img][/url]
+
 [b]#互換性 #マップ #ミニマップ #minimap #worldmap #Minidoracat[/b]
 
 Workshop ID: 3765182411
