@@ -3,64 +3,46 @@
 
 [hr][/hr]
 
-[h2]✨ 這是什麼[/h2]
-[b]Minidoracat MiniMap for B42[/b] 的第三方 MOD [b]相容包[/b]。
-當受支援的 MOD 有啟用時，本包會把已確認的動物群組加入主 MOD 的物種篩選，
-提供有名稱、可個別開關的相容項目。
+[b]Minidoracat MiniMap for B42[/b] 的第三方 MOD 相容包：讓其他 MOD 加入的動物（例如狗、馬）在地圖上有自己的名稱、圖標與篩選開關。
+
+[h2]📦 需要安裝[/h2]
 [list]
-[*] 未啟用對應第三方 MOD 時安靜無作用，不增加多餘選項或錯誤
-[*] 使用遊戲原版符號與本包自行製作的相容圖標，不複製或重包第三方 MOD 的程式、模型、貼圖、音效
-[*] 不接管第三方 MOD 自己的 marker；相容功能可在主 MOD 的物種篩選個別關閉
+[*] [b]必裝[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]Minidoracat MiniMap for B42[/url]
+[*] [b]選裝[/b]：要支援的第三方 MOD（見下方支援清單）；沒裝的那個就不會有作用
+[/list]
+系列 MOD 請都更新到最新版，更新後重新啟動遊戲。
+
+[h2]🚀 快速上手[/h2]
+[olist]
+[*] 訂閱並啟用主 MOD、本相容包，以及要支援的第三方 MOD（多人時伺服器三者都要啟用）
+[*] 在主 MOD 的動物圖標設定中開啟動物圖標
+[*] 物種篩選會出現「狗（附近已載入）」「馬（附近已載入）」，可個別開關
+[/olist]
+
+[h2]✨ 主要功能[/h2]
+[list]
+[*] 支援 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs [ALPHA][/url] 與 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url]
+[*] 狗使用原版爪印或本包自製的彩色狗圖；馬使用本包自製的馬頭符號或彩色馬圖
+[*] 不接管第三方 MOD 自己的 marker，Companion Dogs 的 companion marker 照常運作
+[*] 沒裝對應的第三方 MOD 時安靜無作用，不增加多餘選項或錯誤
+[*] 不含第三方 MOD 的程式、模型、貼圖或音效
+[/list]
+📖 [b]支援行為、多人注意事項與許願方式：[/b][url=https://steamcommunity.com/workshop/filedetails/discussion/3765182411/586187095760055679/]相容包說明＆支援許願[/url]
+
+[h2]🔗 Minidoracat 小地圖系列[/h2]
+[list]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]MiniMap for B42[/url]（主 MOD，必裝）——圖片化世界地圖與小地圖、搜尋、導航
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763914102]MOD Maps[/url]——地圖 MOD 的地圖圖片與路名翻譯
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3792675881]AutoDrive[/url]——GPS 導航與自動駕駛
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3768276209]Zones[/url]——伺服器自訂區域
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411]MOD Compatibility[/url]——狗、馬等第三方動物圖標
 [/list]
 
-[h2]🐕🐎 目前支援[/h2]
+[h2]💬 回報與交流[/h2]
 [list]
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs [ALPHA][/url]（Mod ID: [b]CompanionDogs[/b]）
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod [B42.14+/MP SOON][/url]（Mod ID: [b]Horse[/b]）
+[*] GitHub Issues：[url=https://github.com/Minidoracat/MinidoracatMiniMapCompatFor42/issues]https://github.com/Minidoracat/MinidoracatMiniMapCompatFor42/issues[/url]
+[*] Discord：[url=https://discord.gg/Gur2V67]https://discord.gg/Gur2V67[/url]
 [/list]
-
-Companion Dogs 啟用時，「狗（附近已載入）」會出現在主 MOD 的動物物種篩選，
-主 MOD 動物圖標開啟後，附近已載入且屬於 [b]dog[/b] 群組的狗會依圖標風格使用
-原版爪印或本包自製的彩色狗圖。本包也新增經驗證的「狗」名稱與獨立開關。
-
-[b]重點：[/b]Companion Dogs 原本的 active／passive companion marker 仍照常運作。
-主 MOD 動物圖標預設關閉，因此預設不會多畫泛用圖標；若開啟後只想保留上游 marker，
-在主 MOD「動物圖標」物種篩選取消「狗」即可。
-
-Horse Mod 啟用時，「馬（附近已載入）」會出現在物種篩選；附近已載入且屬於
-[b]horse[/b] 群組的馬會使用本包自製的馬頭符號或彩色馬圖。本包只負責顯示，
-不修改馬的生成、AI、裝備或騎乘，也不包含 Horse Mod 的素材。
-
-[b]多人注意：[/b]相容包可在多人使用，但 Horse Mod 目前標示 [b]MP SOON[/b]，且上游說明
-明載騎乘尚未支援多人。本相容功能不會改變或繞過 Horse Mod 的多人限制。
-
-[h2]🔗 系列 MOD[/h2]
-[list]
-[*] [b]主 MOD（必裝）[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]Minidoracat MiniMap for B42[/url]——地圖圖片化本體
-[*] [b]本頁[/b]：MOD Compatibility——第三方 MOD 相容包
-[*] [b]選裝[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763914102]MOD Maps[/url]——地圖 MOD 圖像包
-[*] [b]選裝[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3768276209]Zones[/url]——伺服器自訂區域顯示
-[/list]
-
-[h2]📋 MOD 資訊[/h2]
-[list]
-[*] [b]Mod ID:[/b] MinidoracatMiniMapCompatFor42
-[*] [b]必要 MOD:[/b] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]Minidoracat MiniMap for B42[/url]
-[*] [b]選用 MOD:[/b] Companion Dogs、Horse Mod；各自沒裝時會安靜 no-op
-[*] [b]支援版本:[/b] Build 42.19.0+
-[*] 單機 / 多人皆可用（多人伺服器需啟用主 MOD、第三方 MOD與本相容包）
-[/list]
-
-[h2]🙏 原作者與素材邊界[/h2]
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url] 由其原作者團隊製作；
-本包必須搭配原始 MOD 使用，未重包其程式或素材。狗與馬的彩圖、馬符號均由本相容包自行製作。
-
-[h2]💡 想支援其他 MOD？[/h2]
-歡迎到 [url=https://steamcommunity.com/workshop/filedetails/discussion/3765182411/574921459914281992/]相容支援許願區[/url] 提供第三方 MOD 的 Workshop 連結與想顯示的物件類型。
-是否能支援取決於該 MOD 是否使用可安全辨識的原版物件資料，以及其授權與相容邊界。
-
-[h2]💬 問題回報 & 交流[/h2]
-[url=https://discord.gg/Gur2V67]👉 點此加入 Discord 伺服器[/url]
 
 [h2]☕ 支持作者[/h2]
 覺得有幫助的話，請在這頁按個 👍 讚、到 GitHub 給個 ⭐ 星星，讓更多玩家找得到它。

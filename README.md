@@ -53,7 +53,8 @@
 ```text
 MinidoracatMiniMapCompatFor42/
 ├── STEAM_DESCRIPTION*.md
-├── STEAM_DISCUSSION_wishlist.md
+├── STEAM_DISCUSSION_guide*.md      # 說明＆許願串（繁中／EN）
+├── STEAM_DISCUSSION_wishlist.md    # 舊許願串的指路文
 ├── link_workshop.bat
 ├── PZ_Test.bat
 ├── scripts/
