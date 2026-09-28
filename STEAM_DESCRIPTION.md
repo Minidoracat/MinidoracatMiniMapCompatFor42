@@ -3,7 +3,7 @@
 
 [hr][/hr]
 
-[b]Minidoracat MiniMap for B42[/b] 的第三方 MOD 相容包：讓其他 MOD 加入的動物（例如狗、馬）在地圖上有自己的名稱、圖標與篩選開關。
+小地圖的第三方 MOD 相容包，讓其他 MOD 加入的狗、馬等動物在地圖上有自己的名稱、圖標與篩選開關。
 
 [h2]📦 需要安裝[/h2]
 [list]
@@ -14,18 +14,18 @@
 
 [h2]🚀 快速上手[/h2]
 [olist]
-[*] 訂閱並啟用主 MOD、本相容包，以及要支援的第三方 MOD（多人時伺服器三者都要啟用）
+[*] 訂閱並啟用主 MOD、本相容包與要支援的第三方 MOD
 [*] 在主 MOD 的動物圖標設定中開啟動物圖標
 [*] 物種篩選會出現「狗（附近已載入）」「馬（附近已載入）」，可個別開關
 [/olist]
 
 [h2]✨ 主要功能[/h2]
 [list]
-[*] 支援 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs [ALPHA][/url] 與 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url]
-[*] 狗使用原版爪印或本包自製的彩色狗圖；馬使用本包自製的馬頭符號或彩色馬圖
-[*] 不接管第三方 MOD 自己的 marker，Companion Dogs 的 companion marker 照常運作
-[*] 沒裝對應的第三方 MOD 時安靜無作用，不增加多餘選項或錯誤
-[*] 不含第三方 MOD 的程式、模型、貼圖或音效
+[*] [b]支援的 MOD[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs[/url] 與 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url]
+[*] [b]專屬圖標[/b]：狗用原版爪印或彩色狗圖，馬用馬頭符號或彩色馬圖
+[*] [b]不接管 marker[/b]：第三方 MOD 自己的 marker 照常運作
+[*] [b]沒裝就不作用[/b]：沒裝對應 MOD 時不增加選項，也不產生錯誤
+[*] [b]不含第三方素材[/b]：不含第三方 MOD 的程式、模型、貼圖或音效
 [/list]
 📖 [b]支援行為、多人注意事項與許願方式：[/b][url=https://steamcommunity.com/workshop/filedetails/discussion/3765182411/586187095760055679/]相容包說明＆支援許願[/url]
 
@@ -37,6 +37,7 @@
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3768276209]Zones[/url]——伺服器自訂區域
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411]MOD Compatibility[/url]——狗、馬等第三方動物圖標
 [/list]
+其他作品：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3809297109]Minidoracat 全系列收藏[/url]
 
 [h2]💬 回報與交流[/h2]
 [list]

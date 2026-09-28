@@ -3,7 +3,7 @@
 
 [hr][/hr]
 
-[b]Minidoracat MiniMap for B42[/b] 用のサードパーティ MOD 互換パックです。他の MOD が追加する動物（犬や馬など）に、マップ上の名前・アイコン・フィルターの切り替えを用意します。
+ミニマップ用のサードパーティ MOD 互換パックです。他の MOD が追加する犬や馬などの動物に、マップ上の名前・アイコン・フィルター切り替えを用意します。
 
 [h2]📦 必要なもの[/h2]
 [list]
@@ -14,18 +14,18 @@
 
 [h2]🚀 クイックスタート[/h2]
 [olist]
-[*] 本体 MOD、本互換パック、対応させたいサードパーティ MOD を購読して有効化します（マルチではサーバーで 3 つとも有効化）
+[*] 本体 MOD、本互換パック、対応させたいサードパーティ MOD を購読して有効化します
 [*] 本体 MOD の動物アイコン設定で動物アイコンを ON にします
 [*] 種別フィルターに「犬（周辺で読み込み済み）」「馬（周辺で読み込み済み）」が追加され、個別に切り替えられます
 [/olist]
 
 [h2]✨ 主な機能[/h2]
 [list]
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs [ALPHA][/url] と [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url] に対応
-[*] 犬はゲーム標準の足跡シンボルか本パック独自のカラー犬アイコン、馬は本パック独自の馬頭シンボルかカラー馬アイコンで表示
-[*] サードパーティ MOD 独自の marker は置き換えません（Companion Dogs の companion marker もそのまま動作）
-[*] 対応するサードパーティ MOD がない場合は、余計な設定やエラーを出さず何もしません
-[*] サードパーティ MOD のコード・モデル・テクスチャ・音声は含みません
+[*] [b]対応 MOD[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs[/url] と [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url]
+[*] [b]専用アイコン[/b]：犬は標準の足跡かカラー犬アイコン、馬は馬頭シンボルかカラー馬アイコン
+[*] [b]marker は置き換えない[/b]：サードパーティ MOD 独自の marker はそのまま動作します
+[*] [b]未導入なら何もしない[/b]：対応 MOD がなければ余計な設定やエラーを出しません
+[*] [b]他 MOD の素材は含まない[/b]：サードパーティ MOD のコード・モデル・テクスチャ・音声は含みません
 [/list]
 📖 [b]対応内容の詳細、マルチプレイの注意、対応リクエストの方法：[/b][url=https://steamcommunity.com/workshop/filedetails/discussion/3765182411/586187095760055711/]Compatibility Guide & Requests[/url]（英語）
 
@@ -37,6 +37,7 @@
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3768276209]Zones[/url]——サーバー独自のエリア表示
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411]MOD Compatibility[/url]——犬・馬など他 MOD の動物アイコン
 [/list]
+その他の MOD：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3809297109]Minidoracat 全シリーズ コレクション[/url]
 
 [h2]💬 報告・交流[/h2]
 [list]

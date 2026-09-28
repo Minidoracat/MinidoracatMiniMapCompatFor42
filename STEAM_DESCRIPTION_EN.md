@@ -3,7 +3,7 @@
 
 [hr][/hr]
 
-A third-party MOD compatibility pack for [b]Minidoracat MiniMap for B42[/b]: animals added by other MODs (such as dogs and horses) get their own name, icon, and filter toggle on the map.
+A third-party MOD compatibility pack for the MiniMap: dogs, horses and other animals added by other MODs get their own name, icon and filter toggle on the map.
 
 [h2]📦 Requirements[/h2]
 [list]
@@ -14,18 +14,18 @@ Keep every Minidoracat MiniMap series mod up to date and restart the game after 
 
 [h2]🚀 Quick start[/h2]
 [olist]
-[*] Subscribe to and enable the main MOD, this pack, and the third-party MOD you want supported (in multiplayer, the server must enable all three)
+[*] Subscribe to and enable the main MOD, this pack and the third-party MOD you want supported
 [*] Turn on animal icons in the main MOD's animal icon settings
 [*] “Dogs (loaded nearby)” and “Horses (loaded nearby)” appear in the species filter and can be toggled individually
 [/olist]
 
 [h2]✨ Key features[/h2]
 [list]
-[*] Supports [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs [ALPHA][/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url]
-[*] Dogs use the vanilla paw-print symbol or this pack's original colored dog icon; horses use this pack's original horse-head symbol or colored horse icon
-[*] Does not replace third-party markers; Companion Dogs' own companion markers keep working
-[*] Quietly does nothing when the matching third-party MOD is not installed — no extra options or errors
-[*] Contains no third-party code, models, textures, or sounds
+[*] [b]Supported MODs[/b]: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url]
+[*] [b]Dedicated icons[/b]: dogs use the vanilla paw print or a colored dog icon; horses use a horse-head symbol or a colored horse icon
+[*] [b]Markers left alone[/b]: third-party MODs' own markers keep working
+[*] [b]Inactive when absent[/b]: without the matching MOD, no extra options and no errors
+[*] [b]No third-party assets[/b]: contains no third-party code, models, textures or sounds
 [/list]
 📖 [b]Supported behavior, multiplayer notes, and how to request support:[/b] [url=https://steamcommunity.com/workshop/filedetails/discussion/3765182411/586187095760055711/]Compatibility Guide & Requests[/url]
 
@@ -37,6 +37,7 @@ Keep every Minidoracat MiniMap series mod up to date and restart the game after 
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3768276209]Zones[/url] — custom server zones
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411]MOD Compatibility[/url] — icons for third-party animals such as dogs and horses
 [/list]
+More mods: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3809297109]Minidoracat Mods for B42 collection[/url]
 
 [h2]💬 Feedback & community[/h2]
 [list]
