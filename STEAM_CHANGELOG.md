@@ -1,9 +1,8 @@
-[h1]Minidoracat MiniMap - MOD Compatibility for B42 42.19.0-0.2.0[/h1]
-[i]2026-07-15[/i]
+[h1]Minidoracat MiniMap - MOD Compatibility for B42 42.21.0-0.2.1[/h1]
+[i]2026-09-29[/i]
 
-[h3]✨ 新增[/h3]
+[h3]🔄 變更[/h3]
 [list]
-[*] 支援 Horse Mod（Workshop 3661336777）：將 horse 群組加入主 MOD 動物物種篩選。
-[*] 加入自製的馬符號、彩色馬圖與彩色狗圖；不包含任何第三方 MOD 素材。
-[*] 本機掛載與 no-steam 伺服器 Mods= 流程加入 Horse，卸載時可選擇連同兩個上游 MOD 一併移除。
+[*] 對應遊戲 42.21.0：已確認相容包可正常使用，功能沒有變動。
+[*] 說明文字的遊戲版本需求改為「跟隨主 MOD」：主 MOD 能玩的版本，本包就能用（目前需 Build 42.21.0 以上）。
 [/list]

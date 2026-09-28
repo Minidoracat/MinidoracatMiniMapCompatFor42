@@ -36,7 +36,7 @@
 
 - 必要：`MinidoracatMiniMapFor42`（`mod.info` 以 `require=` 保證先載入）。
 - 選用：`CompanionDogs`、`Horse`。各自未啟用時安靜 no-op，不新增對應選項、不產生錯誤。
-- Build 42.19.0+；單機與多人皆可用。多人伺服器需啟用主 MOD、第三方 MOD與本相容包。
+- 遊戲版本跟隨主 MOD（目前需 Build 42.21.0 以上）；單機與多人皆可用。多人伺服器需啟用主 MOD、第三方 MOD與本相容包。
 - no-steam 本機伺服器的 `Mods=` 順序：
   `MinidoracatMiniMapFor42;CompanionDogs;Horse;MinidoracatMiniMapCompatFor42`。
 - `link_workshop.bat` 卸載只歸檔本相容包的受管副本，不移除主 MOD、CompanionDogs、Horse 或其他 MOD。

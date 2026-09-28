@@ -13,7 +13,7 @@ This thread explains which MODs the [url=https://steamcommunity.com/sharedfiles/
 [*] Turn on animal icons in the main MOD's animal icon settings (they are off by default)
 [*] “Dogs (loaded nearby)” and “Horses (loaded nearby)” appear in the species filter and can be toggled individually
 [/olist]
-Works on Build 42.19.0+, in both singleplayer and multiplayer.
+The game version follows the main MOD (currently Build 42.21.0 or later). Works in both singleplayer and multiplayer.
 
 [h2]🐕🐎 Supported MODs and what they do[/h2]
 
