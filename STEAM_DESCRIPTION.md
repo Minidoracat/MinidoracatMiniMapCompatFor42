@@ -10,7 +10,7 @@
 [*] [b]必裝[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]Minidoracat MiniMap for B42[/url]
 [*] [b]選裝[/b]：要支援的第三方 MOD（見下方支援清單）；沒裝的那個就不會有作用
 [*] [b]中途加入／移除：[/b]都可以
-[*] [b]介面語言：[/b]繁體中文、简体中文、English、日本語
+[*] [b]介面語言：[/b]繁體中文、简体中文、English、日本語、한국어、Русский、Español、Português、Türkçe、Français、Polski、Deutsch（中英日以外為 AI 翻譯，歡迎回報）
 [/list]
 系列 MOD 請都更新到最新版，更新後重新啟動遊戲。
 
