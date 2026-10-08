@@ -9,6 +9,8 @@
 [list]
 [*] [b]必須[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]Minidoracat MiniMap for B42[/url]
 [*] [b]任意[/b]：対応させたいサードパーティ MOD（下の対応一覧を参照）。導入していない MOD の分は何もしません
+[*] [b]途中追加・削除：[/b]どちらも可能
+[*] [b]対応言語：[/b]繁體中文、简体中文、English、日本語
 [/list]
 シリーズの MOD はすべて最新版に更新し、更新後はゲームを再起動してください。
 

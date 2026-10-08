@@ -9,6 +9,8 @@ A third-party MOD compatibility pack for the MiniMap: dogs, horses and other ani
 [list]
 [*] [b]Required[/b]: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]Minidoracat MiniMap for B42[/url]
 [*] [b]Optional[/b]: the third-party MODs you want supported (see the list below); support for a MOD you don't have simply stays inactive
+[*] [b]Add/remove mid-save:[/b] safe either way
+[*] [b]Languages:[/b] 繁體中文, 简体中文, English, 日本語
 [/list]
 Keep every Minidoracat MiniMap series mod up to date and restart the game after updating.
 
