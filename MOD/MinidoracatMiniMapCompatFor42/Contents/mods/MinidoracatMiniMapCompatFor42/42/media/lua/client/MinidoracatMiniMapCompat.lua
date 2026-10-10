@@ -19,7 +19,7 @@ local function registerIfActive(modId, group, labelKey, symbolPath, itemPath)
         api.registerAnimalGroup(OWN_MOD_ID, group, labelKey, symbolPath, itemPath)
     elseif not missingApiLogged then
         missingApiLogged = true
-        print("[MinidoracatMiniMapCompat] registerAnimalGroup API 不存在；請更新 MinidoracatMiniMapFor42")
+        print("[MinidoracatMiniMapCompat] registerAnimalGroup API missing; please update MinidoracatMiniMapFor42")
     end
 end
 
