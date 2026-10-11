@@ -9,7 +9,7 @@ This thread explains which MODs the [url=https://steamcommunity.com/sharedfiles/
 
 [h2]🚀 Quick start[/h2]
 [olist]
-[*] Subscribe to and enable [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]Minidoracat MiniMap for B42[/url] (main MOD), this pack, and the third-party MOD you want supported; in multiplayer, the server must enable all three
+[*] Subscribe to and enable [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]Minidoracat MiniMap[/url] (main MOD), this pack, and the third-party MOD you want supported; in multiplayer, the server must enable all three
 [*] Turn on animal icons in the main MOD's animal icon settings (they are off by default)
 [*] “Dogs (loaded nearby)” and “Horses (loaded nearby)” appear in the species filter and can be toggled individually
 [/olist]

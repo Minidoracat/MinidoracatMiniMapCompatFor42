@@ -9,7 +9,7 @@
 
 [h2]🚀 快速上手[/h2]
 [olist]
-[*] 訂閱並啟用 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]Minidoracat MiniMap for B42[/url]（主 MOD）、本相容包，以及要支援的第三方 MOD；多人時伺服器三者都要啟用
+[*] 訂閱並啟用 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]Minidoracat MiniMap[/url]（主 MOD）、本相容包，以及要支援的第三方 MOD；多人時伺服器三者都要啟用
 [*] 在主 MOD 的動物圖標設定中開啟動物圖標（預設是關閉的）
 [*] 物種篩選會出現「狗（附近已載入）」「馬（附近已載入）」，可以個別開關
 [/olist]

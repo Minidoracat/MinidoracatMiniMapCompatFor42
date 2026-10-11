@@ -1,8 +1,8 @@
-# Minidoracat MiniMap - MOD Compatibility for B42
+# Minidoracat MiniMap - MOD Compatibility
 
 **By Minidoracat**
 
-[Minidoracat MiniMap for B42](../MinidoracatMiniMapFor42) 的第三方 MOD 相容包。
+[Minidoracat MiniMap](../MinidoracatMiniMapFor42) 的第三方 MOD 相容包。
 每個 adapter 只把已確認的原版物件群組登記到主 MOD 的公開 API，提供有名稱、可個別開關的
 物種篩選項；不複製第三方程式或素材，也不接管第三方 MOD 自己的地圖標記。本包只內含
 自行製作的相容圖標。

@@ -1,15 +1,15 @@
 id=3765182411
 title=[B42] Minidoracat MiniMap - MOD Compatibility
-description=[h1]🧩 Minidoracat MiniMap - MOD Compatibility for B42[/h1]
+description=[h1]🧩 Minidoracat MiniMap - MOD Compatibility[/h1]
 description=[h3]By Minidoracat[/h3]
 description=
 description=[hr][/hr]
 description=
-description=A third-party MOD compatibility pack for [b]Minidoracat MiniMap for B42[/b]: animals added by other MODs (such as dogs and horses) get their own name, icon, and filter toggle on the map.
+description=A third-party MOD compatibility pack for [b]Minidoracat MiniMap[/b]: animals added by other MODs (such as dogs and horses) get their own name, icon, and filter toggle on the map.
 description=
 description=[h2]📦 Requirements[/h2]
 description=[list]
-description=[*] [b]Required[/b]: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]Minidoracat MiniMap for B42[/url]
+description=[*] [b]Required[/b]: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]Minidoracat MiniMap[/url]
 description=[*] [b]Optional[/b]: the third-party MODs you want supported (see the list below); support for a MOD you don't have simply stays inactive
 description=[/list]
 description=Keep every Minidoracat MiniMap series mod up to date and restart the game after updating.
@@ -33,7 +33,7 @@ description=📖 [b]Supported behavior, multiplayer notes, and how to request su
 description=
 description=[h2]🔗 Minidoracat MiniMap series[/h2]
 description=[list]
-description=[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]MiniMap for B42[/url] (main mod, required) — image-based world map and minimap, search, navigation
+description=[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]MiniMap[/url] (main mod, required) — image-based world map and minimap, search, navigation
 description=[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763914102]MOD Maps[/url] — map images and street-name translations for map mods
 description=[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3792675881]AutoDrive[/url] — GPS navigation and autonomous driving
 description=[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3768276209]Zones[/url] — custom server zones
