@@ -1,5 +1,5 @@
 id=3765182411
-title=Minidoracat MiniMap - MOD Compatibility for B42
+title=[B42] Minidoracat MiniMap - MOD Compatibility
 description=[h1]🧩 Minidoracat MiniMap - MOD Compatibility for B42[/h1]
 description=[h3]By Minidoracat[/h3]
 description=
