@@ -29,7 +29,7 @@
 [*] [b]沒裝就不作用[/b]：沒裝對應 MOD 時不增加選項，也不產生錯誤
 [*] [b]不含第三方素材[/b]：不含第三方 MOD 的程式、模型、貼圖或音效
 [/list]
-📖 [b]支援行為、多人注意事項與許願方式：[/b][url=https://steamcommunity.com/workshop/filedetails/discussion/3765182411/586187095760055679/]相容包說明＆支援許願[/url]
+📖 [b]支援行為、多人注意事項與許願方式：[/b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817848780]小地圖 - MOD 相容包 完整說明：支援的 MOD、多人注意與常見問題[/url]
 
 [h2]🔗 Minidoracat 小地圖系列[/h2]
 [list]

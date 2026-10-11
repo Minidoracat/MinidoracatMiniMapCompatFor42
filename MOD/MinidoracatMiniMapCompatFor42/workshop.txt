@@ -29,7 +29,7 @@ description=[*] Does not replace third-party markers; Companion Dogs' own compan
 description=[*] Quietly does nothing when the matching third-party MOD is not installed — no extra options or errors
 description=[*] Contains no third-party code, models, textures, or sounds
 description=[/list]
-description=📖 [b]Supported behavior, multiplayer notes, and how to request support:[/b] [url=https://steamcommunity.com/workshop/filedetails/discussion/3765182411/586187095760055711/]Compatibility Guide & Requests[/url]
+description=📖 [b]Supported behavior, multiplayer notes, and how to request support:[/b] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817848926]MiniMap - MOD Compatibility Guide: Supported Mods, Multiplayer & FAQ[/url]
 description=
 description=[h2]🔗 Minidoracat MiniMap series[/h2]
 description=[list]

@@ -29,7 +29,7 @@ Keep every Minidoracat MiniMap series mod up to date and restart the game after 
 [*] [b]Inactive when absent[/b]: without the matching MOD, no extra options and no errors
 [*] [b]No third-party assets[/b]: contains no third-party code, models, textures or sounds
 [/list]
-📖 [b]Supported behavior, multiplayer notes, and how to request support:[/b] [url=https://steamcommunity.com/workshop/filedetails/discussion/3765182411/586187095760055711/]Compatibility Guide & Requests[/url]
+📖 [b]Supported behavior, multiplayer notes, and how to request support:[/b] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817848926]MiniMap - MOD Compatibility Guide: Supported Mods, Multiplayer & FAQ[/url]
 
 [h2]🔗 Minidoracat MiniMap series[/h2]
 [list]

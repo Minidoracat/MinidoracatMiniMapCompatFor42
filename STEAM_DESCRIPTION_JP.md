@@ -29,7 +29,7 @@
 [*] [b]未導入なら何もしない[/b]：対応 MOD がなければ余計な設定やエラーを出しません
 [*] [b]他 MOD の素材は含まない[/b]：サードパーティ MOD のコード・モデル・テクスチャ・音声は含みません
 [/list]
-📖 [b]対応内容の詳細、マルチプレイの注意、対応リクエストの方法：[/b][url=https://steamcommunity.com/workshop/filedetails/discussion/3765182411/586187095760055711/]Compatibility Guide & Requests[/url]（英語）
+📖 [b]対応内容の詳細、マルチプレイの注意、対応リクエストの方法：[/b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817848926]MiniMap - MOD Compatibility Guide: Supported Mods, Multiplayer & FAQ[/url]（英語）
 
 [h2]🔗 Minidoracat ミニマップ シリーズ[/h2]
 [list]
