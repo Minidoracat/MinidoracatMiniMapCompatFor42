@@ -66,9 +66,14 @@ Random Airdrops HF 的空投畫成地圖標記。不複製第三方程式或素�
 ### 讀第三方私有資料與上游監看
 
 Dynamic Outposts 與 Random Airdrops HF 沒有給其他 MOD 用的介面，本包直接讀它們的內部資料（Random Airdrops
-另外包住 `RandomAirdrops.FlyOver` 記下座標，照原樣呼叫原函式）。依賴的每個名稱都登記在 `upstream.json`，
-GitHub Action（`.github/workflows/upstream-watch.yml`）每天比對 Steam 上的版本，有更新就開 issue，列出變動的檔案與
-哪些名稱不見了；不是每次更新都要跟著改。對不上時本包不畫、只在遊戲紀錄檔留一行，不會讓遊戲出錯。
+另外包住 `RandomAirdrops.FlyOver` 記下座標，照原樣呼叫原函式）。對不上時本包不畫、只在遊戲紀錄檔留一行，不會讓遊戲出錯。
+
+六個支援的 MOD 都登記在 `upstream.json`（本包依賴的字串），`upstream/<Workshop ID>.files.json` 存上次核對時的檔案
+SHA-256，不存對方檔案內容。GitHub Action（`.github/workflows/upstream-watch.yml`）每天台灣 11:23 查 Steam，有更新就
+匿名下載、比對檔案與依賴的字串，開一則 label `upstream-update` 的 issue（同一版只通知一次）；不是每次更新都要跟著改。
+標題有「⚠ 契約字串不見」代表對應的功能很可能已經失效，要優先看。處理完用
+`python scripts/check_upstream.py --ack <Workshop ID> --source <下載目錄>/steamapps/workshop/content/108600` 記下新版，
+commit 後再關 issue；沒 ack 就關掉，隔天會再開一則。
 
 ## 安裝與依賴
 

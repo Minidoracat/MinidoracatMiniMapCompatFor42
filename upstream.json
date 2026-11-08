@@ -450,13 +450,6 @@
             "mods/Random Airdrops HF/media/lua/server/airdrop_server.lua"
           ],
           "why": "SpawnedAirdrops 每筆的 index 欄位；本包用它對應座標"
-        },
-        {
-          "text": "RandomAirdrops.spawnIndex",
-          "files": [
-            "mods/Random Airdrops HF/42/media/lua/server/airdrop_server.lua"
-          ],
-          "why": "SpawnedAirdrops 沒有新筆時的 index 後備來源"
         }
       ],
       "recheck": "SpawnAirdrop 是否仍先把 { index = spawnIndex } 放進全域 SpawnedAirdrops、再呼叫 RandomAirdrops.FlyOver(spawnArea)（本包包住 FlyOver 時取 SpawnedAirdrops 最後一筆的 index）；空投被拿走或過期時是否仍從 SpawnedAirdrops 移除；作者若改成支援多人（伺服器送封包給客戶端），本包要改成聽封包。",
