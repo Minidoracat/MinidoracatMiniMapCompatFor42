@@ -3,7 +3,7 @@
 
 [hr][/hr]
 
-ミニマップ用のサードパーティ MOD 互換パックです。他の MOD が追加する犬や馬などの動物に、マップ上の名前・アイコン・フィルター切り替えを用意します。
+ミニマップ用のサードパーティ MOD 互換パックです。他の MOD が追加する犬や馬などの動物に、マップ上の名前・アイコン・フィルター切り替えを用意します。Bandits や Project A-Life の NPC は、ゾンビドットの中で専用の色で表示されます。
 
 [h2]📦 必要なもの[/h2]
 [list]
@@ -19,11 +19,13 @@
 [*] 本体 MOD、本互換パック、対応させたいサードパーティ MOD を購読して有効化します
 [*] 本体 MOD の動物アイコン設定で動物アイコンを ON にします
 [*] 種別フィルターに「犬（周辺で読み込み済み）」「馬（周辺で読み込み済み）」が追加され、個別に切り替えられます
+[*] NPC の色分けを見るには：本体 MOD の「ミニマップにゾンビドットを表示」を ON にします。マップ表示設定の「ゾンビ」カテゴリで NPC MOD ごとの色を変えられます
 [/olist]
 
 [h2]✨ 主な機能[/h2]
 [list]
-[*] [b]対応 MOD[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs[/url] と [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url]
+[*] [b]対応 MOD[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3268487204]Bandits[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3803984183]Project A-Life[/url]
+[*] [b]NPC の色分け[/b]：Bandits と Project A-Life の NPC をゾンビドットの中でそれぞれの色（初期値は水色と緑）で、ゾンビの上に表示します。NPC の色分けに対応した本体 MOD の新しい版が必要です
 [*] [b]専用アイコン[/b]：犬は標準の足跡かカラー犬アイコン、馬は馬頭シンボルかカラー馬アイコン
 [*] [b]marker は置き換えない[/b]：サードパーティ MOD 独自の marker はそのまま動作します
 [*] [b]未導入なら何もしない[/b]：対応 MOD がなければ余計な設定やエラーを出しません
@@ -37,7 +39,7 @@
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763914102]MOD Maps[/url]——マップ MOD の地図画像と道路名の翻訳
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3792675881]AutoDrive[/url]——GPS ナビと自動運転
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3768276209]Zones[/url]——サーバー独自のエリア表示
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411]MOD Compatibility[/url]——犬・馬など他 MOD の動物アイコン
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411]MOD Compatibility[/url]——犬・馬など他 MOD の動物アイコン、Bandits などの NPC の色分け
 [/list]
 その他の MOD：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3809297109]Minidoracat 全シリーズ コレクション[/url]
 

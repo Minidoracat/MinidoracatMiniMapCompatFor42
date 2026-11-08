@@ -3,7 +3,7 @@
 
 [hr][/hr]
 
-A third-party MOD compatibility pack for the MiniMap: dogs, horses and other animals added by other MODs get their own name, icon and filter toggle on the map.
+A third-party MOD compatibility pack for the MiniMap: dogs, horses and other animals added by other MODs get their own name, icon and filter toggle on the map, and NPCs from Bandits and Project A-Life get their own color among the zombie dots.
 
 [h2]📦 Requirements[/h2]
 [list]
@@ -19,11 +19,13 @@ Keep every Minidoracat MiniMap series mod up to date and restart the game after 
 [*] Subscribe to and enable the main MOD, this pack and the third-party MOD you want supported
 [*] Turn on animal icons in the main MOD's animal icon settings
 [*] “Dogs (loaded nearby)” and “Horses (loaded nearby)” appear in the species filter and can be toggled individually
+[*] To see NPC colors: turn on the main MOD's “Show zombie dots on the mini-map”; the “Zombies” category of Map Display Settings lets you change each NPC mod's color
 [/olist]
 
 [h2]✨ Key features[/h2]
 [list]
-[*] [b]Supported MODs[/b]: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url]
+[*] [b]Supported MODs[/b]: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3268487204]Bandits[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3803984183]Project A-Life[/url]
+[*] [b]NPC colors[/b]: NPCs from Bandits and Project A-Life are drawn in their own color among the zombie dots (sky blue and green by default), on top of the zombies; needs a main MOD version with NPC colors
 [*] [b]Dedicated icons[/b]: dogs use the vanilla paw print or a colored dog icon; horses use a horse-head symbol or a colored horse icon
 [*] [b]Markers left alone[/b]: third-party MODs' own markers keep working
 [*] [b]Inactive when absent[/b]: without the matching MOD, no extra options and no errors
@@ -37,7 +39,7 @@ Keep every Minidoracat MiniMap series mod up to date and restart the game after 
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763914102]MOD Maps[/url] — map images and street-name translations for map mods
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3792675881]AutoDrive[/url] — GPS navigation and autonomous driving
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3768276209]Zones[/url] — custom server zones
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411]MOD Compatibility[/url] — icons for third-party animals such as dogs and horses
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411]MOD Compatibility[/url] — icons for third-party animals such as dogs and horses, NPC colors for Bandits and more
 [/list]
 More mods: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3809297109]Minidoracat Mods for B42 collection[/url]
 

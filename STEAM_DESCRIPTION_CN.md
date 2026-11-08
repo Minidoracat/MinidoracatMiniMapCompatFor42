@@ -3,7 +3,7 @@
 
 [hr][/hr]
 
-小地图的第三方 MOD 兼容包，让其他 MOD 加入的狗、马等动物在地图上有自己的名称、图标与筛选开关。
+小地图的第三方 MOD 兼容包，让其他 MOD 加入的狗、马等动物在地图上有自己的名称、图标与筛选开关，也让 Bandits、Project A-Life 的 NPC 在丧尸点位里换成自己的颜色。
 
 [h2]📦 需要安装[/h2]
 [list]
@@ -19,11 +19,13 @@
 [*] 订阅并启用主 MOD、本兼容包与要支持的第三方 MOD
 [*] 在主 MOD 的动物图标设置中打开动物图标
 [*] 物种筛选会出现「狗（附近已加载）」「马（附近已加载）」，可分别开关
+[*] 要看 NPC 换色：打开主 MOD 的「在小地图显示丧尸点位」；地图显示设置的「丧尸」分类可以改每个 NPC MOD 的颜色
 [/olist]
 
 [h2]✨ 主要功能[/h2]
 [list]
-[*] [b]支持的 MOD[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs[/url] 与 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url]
+[*] [b]支持的 MOD[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3268487204]Bandits[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3803984183]Project A-Life[/url]
+[*] [b]NPC 换色[/b]：Bandits 与 Project A-Life 的 NPC 在丧尸点位里改用各自的颜色（默认天蓝、绿），画在丧尸点上面；需要主 MOD 支持 NPC 换色的新版
 [*] [b]专属图标[/b]：狗用原版爪印或彩色狗图，马用马头符号或彩色马图
 [*] [b]不接管 marker[/b]：第三方 MOD 自己的 marker 照常工作
 [*] [b]没装就不生效[/b]：没装对应 MOD 时不增加选项，也不产生错误
@@ -37,7 +39,7 @@
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763914102]MOD Maps[/url]——地图 MOD 的地图图片与路名翻译
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3792675881]AutoDrive[/url]——GPS 导航与自动驾驶
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3768276209]Zones[/url]——服务器自定义区域
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411]MOD Compatibility[/url]——狗、马等第三方动物图标
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411]MOD Compatibility[/url]——狗、马等第三方动物图标，Bandits 等 NPC 换色
 [/list]
 其他作品：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3809297109]Minidoracat 全系列收藏[/url]
 

@@ -1,4 +1,6 @@
 {
   "UI_MinidoracatMiniMapCompat_Dog": "狗（附近已加载）",
-  "UI_MinidoracatMiniMapCompat_Horse": "马（附近已加载）"
+  "UI_MinidoracatMiniMapCompat_Horse": "马（附近已加载）",
+  "UI_MinidoracatMiniMapCompat_Bandits": "Bandits",
+  "UI_MinidoracatMiniMapCompat_ALife": "Project A-Life"
 }

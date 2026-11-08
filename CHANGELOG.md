@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased]
+
+### 新增
+
+- **支援 Bandits 與 Project A-Life 的 NPC 換色**（玩家建議）：這兩個 MOD 的 NPC 在小地圖和世界地圖上原本和殭屍一樣是橘點，現在改用各自的顏色（預設 Bandits 天藍、Project A-Life 綠；只啟用其中一個時它是天藍），畫在殭屍點上面。要開主 MOD 的「在小地圖顯示殭屍點位」才看得到；顏色在地圖顯示設定的「殭屍」分類逐一調整。需要主 MOD 支援 NPC 換色的新版，請兩個 MOD 都更新後重開遊戲。主 MOD 太舊時 NPC 照殭屍色顯示，狗與馬的支援照常。沒啟用 Bandits 或 Project A-Life 時不會有任何變化。
+
+> 技術要點：本包在檔案載入時向主 MOD 的 `registerNpcTag`（`npcApiVersion` 1 以上）登記兩個 tag，依序 `bandits`（變數 `Bandit`，Mod ID `Bandits2`）、`alife`（變數 `ALifeActor`，Mod ID `ProjectALifeNPCs`）。只登記動畫變數名稱，不呼叫這兩個 MOD 的程式、不讀它們的私有資料；兩者都是選用依賴，不在 `require=`。
+
 ## [42.21.0-0.3.2] - 2026-10-27
 
 ### 修正

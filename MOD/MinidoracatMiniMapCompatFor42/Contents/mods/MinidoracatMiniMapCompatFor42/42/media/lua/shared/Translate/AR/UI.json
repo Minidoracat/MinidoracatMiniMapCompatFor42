@@ -1,4 +1,6 @@
 {
   "UI_MinidoracatMiniMapCompat_Dog": "Perros (cargados cerca)",
-  "UI_MinidoracatMiniMapCompat_Horse": "Caballos (cargados cerca)"
+  "UI_MinidoracatMiniMapCompat_Horse": "Caballos (cargados cerca)",
+  "UI_MinidoracatMiniMapCompat_Bandits": "Bandits",
+  "UI_MinidoracatMiniMapCompat_ALife": "Project A-Life"
 }

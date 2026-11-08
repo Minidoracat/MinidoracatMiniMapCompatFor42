@@ -3,9 +3,9 @@
 **By Minidoracat**
 
 [Minidoracat MiniMap](../MinidoracatMiniMapFor42) 的第三方 MOD 相容包。
-每個 adapter 只把已確認的原版物件群組登記到主 MOD 的公開 API，提供有名稱、可個別開關的
-物種篩選項；不複製第三方程式或素材，也不接管第三方 MOD 自己的地圖標記。本包只內含
-自行製作的相容圖標。
+每個 adapter 只把已確認的資料登記到主 MOD 的公開 API：動物 MOD 登記原版物件群組，提供有名稱、
+可個別開關的物種篩選項；NPC MOD 登記它掛在 NPC 身上的動畫變數，讓殭屍點位裡的 NPC 換成自己的顏色。
+不複製第三方程式或素材，也不接管第三方 MOD 自己的地圖標記。本包只內含自行製作的相容圖標。
 
 ## 目前支援
 
@@ -13,6 +13,8 @@
 | --- | --- | --- | --- |
 | Companion Dogs [ALPHA] | [3740052292](https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292) | `CompanionDogs` | 將 `dog` 加入物種篩選；符號風格使用原版爪印，彩圖風格使用本包狗圖 |
 | Horse Mod [B42.14+/MP SOON] | [3661336777](https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777) | `Horse` | 將 `horse` 加入物種篩選；提供本包自製的馬符號與彩圖 |
+| [B42] Bandits NPC | [3268487204](https://steamcommunity.com/sharedfiles/filedetails/?id=3268487204) | `Bandits2` | 殭屍點位裡的 Bandits NPC 換成自己的顏色（預設天藍） |
+| Project A-Life [ALIFE NPCS] | [3803984183](https://steamcommunity.com/sharedfiles/filedetails/?id=3803984183) | `ProjectALifeNPCs` | 殭屍點位裡的 A-Life NPC 換成自己的顏色（預設綠；只啟用它時是天藍） |
 
 ### Companion Dogs 的顯示行為
 
@@ -32,20 +34,32 @@
 - 相容包可用於多人，但 Horse Mod 目前 Workshop 標示 `MP SOON`，且明載騎乘尚未支援多人；
   本相容功能不會改變或繞過該限制。
 
+### Bandits 與 Project A-Life 的顯示行為
+
+- 這兩個 MOD 的 NPC 在遊戲裡是殭屍，主 MOD 的殭屍點位本來就會畫出它們（橘色，和殭屍一樣）。
+  本包向主 MOD 登記兩者掛在 NPC 身上的動畫變數（Bandits `Bandit`、A-Life `ALifeActor`），
+  主 MOD 讀到就改用該 MOD 的顏色，畫在殭屍點上面。
+- 要看到 NPC 換色：主 MOD 的「在小地圖顯示殭屍點位」（預設關）要開；設定視窗「殭屍」分類的
+  「NPC 用另一種顏色」預設開，每個 NPC MOD 一列「點顏色」可以改顏色。那個分類的說明行會寫出目前認得哪些 NPC MOD。
+- 顯示距離、上限、掃描間隔都和殭屍點相同，看得到的範圍不會變大；伺服器沙盒「允許 NPC 點位換色」關閉時不分顏色。
+- 需要主 MOD 支援 NPC 換色的版本（`npcApiVersion` 1 以上）；主 MOD 太舊時本包只在遊戲紀錄檔留一行提示，
+  NPC 照殭屍色顯示，狗與馬的支援照常。
+- 不做：Bandits 的據點、全地圖遊蕩隊、敵友分色。本包不讀兩個 MOD 的私有資料，也不呼叫它們的程式。
+
 ## 安裝與依賴
 
 - 必要：`MinidoracatMiniMapFor42`（`mod.info` 以 `require=` 保證先載入）。
-- 選用：`CompanionDogs`、`Horse`。各自未啟用時安靜 no-op，不新增對應選項、不產生錯誤。
+- 選用：`CompanionDogs`、`Horse`、`Bandits2`、`ProjectALifeNPCs`。各自未啟用時安靜 no-op，不新增對應選項、不產生錯誤。
 - 遊戲版本跟隨主 MOD（目前需 Build 42.21.0 以上）；單機與多人皆可用。多人伺服器需啟用主 MOD、第三方 MOD與本相容包。
 - no-steam 本機伺服器的 `Mods=` 順序：
-  `MinidoracatMiniMapFor42;CompanionDogs;Horse;MinidoracatMiniMapCompatFor42`。
+  `MinidoracatMiniMapFor42;CompanionDogs;Horse;Bandits2;ProjectALifeNPCs;MinidoracatMiniMapCompatFor42`。
 - `link_workshop.bat` 卸載只歸檔本相容包的受管副本，不移除主 MOD、CompanionDogs、Horse 或其他 MOD。
 
 ## 為什麼獨立專案
 
-主 MOD 維持通用的地圖與 `IsoAnimal` 顯示能力；第三方 MOD 的名稱、群組、測試與相容說明集中在
+主 MOD 維持通用的地圖、`IsoAnimal` 與殭屍點位顯示能力；第三方 MOD 的名稱、群組、NPC 變數、測試與相容說明集中在
 本專案。未來某個第三方 MOD 更新或移除時，可以單獨調整 adapter，不必把第三方耦合帶進
-主 MOD。相容包本身仍保持資料導向：只有靜態群組登記與自有圖標，不需要 callback、provider
+主 MOD。相容包本身仍保持資料導向：只有靜態的群組與 NPC 變數登記、自有圖標，不需要 callback、provider
 或額外繪製 hook。
 
 ## 專案結構
@@ -66,7 +80,7 @@ MinidoracatMiniMapCompatFor42/
     └── media/
         ├── lua/
         │   ├── client/MinidoracatMiniMapCompat.lua
-        │   └── shared/Translate/{CH,CN,EN,JP}/UI.json
+        │   └── shared/Translate/<16 個語系：AR,CH,CN,DE,EN,ES,ES_CL,ES_MX,FR,JP,KO,PL,PT,PTBR,RU,TR>/UI.json
         ├── textures/Item_MinidoracatMiniMapCompat_{Dog,Horse}.png
         └── ui/MinidoracatMiniMapCompat/map_horse.png
 ```
