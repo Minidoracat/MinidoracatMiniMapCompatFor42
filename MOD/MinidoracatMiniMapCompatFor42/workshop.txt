@@ -5,29 +5,34 @@ description=[h3]By Minidoracat[/h3]
 description=
 description=[hr][/hr]
 description=
-description=A third-party MOD compatibility pack for [b]Minidoracat MiniMap[/b]: animals added by other MODs (such as dogs and horses) get their own name, icon, and filter toggle on the map.
+description=A third-party MOD compatibility pack for the MiniMap: animals, NPCs, outposts and airdrops from other MODs show up on your map too.
 description=
 description=[h2]📦 Requirements[/h2]
 description=[list]
 description=[*] [b]Required[/b]: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]Minidoracat MiniMap[/url]
 description=[*] [b]Optional[/b]: the third-party MODs you want supported (see the list below); support for a MOD you don't have simply stays inactive
+description=[*] [b]Add/remove mid-save:[/b] safe either way
+description=[*] [b]Languages:[/b] 繁體中文, 简体中文, English, 日本語, 한국어, Русский, Español, Português, Türkçe, Français, Polski, Deutsch (please report any translation issues)
 description=[/list]
 description=Keep every Minidoracat MiniMap series mod up to date and restart the game after updating.
 description=
 description=[h2]🚀 Quick start[/h2]
 description=[olist]
-description=[*] Subscribe to and enable the main MOD, this pack, and the third-party MOD you want supported (in multiplayer, the server must enable all three)
+description=[*] Subscribe to and enable the main MOD, this pack and the third-party MOD you want supported
 description=[*] Turn on animal icons in the main MOD's animal icon settings
 description=[*] “Dogs (loaded nearby)” and “Horses (loaded nearby)” appear in the species filter and can be toggled individually
+description=[*] To see NPC colors, turn on the main MOD's “Show zombie dots on the mini-map”
 description=[/olist]
 description=
 description=[h2]✨ Key features[/h2]
 description=[list]
-description=[*] Supports [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs [ALPHA][/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url]
-description=[*] Dogs use the vanilla paw-print symbol or this pack's original colored dog icon; horses use this pack's original horse-head symbol or colored horse icon
-description=[*] Does not replace third-party markers; Companion Dogs' own companion markers keep working
-description=[*] Quietly does nothing when the matching third-party MOD is not installed — no extra options or errors
-description=[*] Contains no third-party code, models, textures, or sounds
+description=[*] [b]Supported MODs[/b]: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3268487204]Bandits[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3803984183]Project A-Life[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3791152383]Dynamic Outposts[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3789197845]Random Airdrops HF[/url]
+description=[*] [b]NPC colors[/b]: NPCs from Bandits and Project A-Life get their own color among the zombie dots
+description=[*] [b]Outposts and airdrops[/b]: outposts, infested areas and airdrop drop points also show on the mini-map
+description=[*] [b]Dedicated icons[/b]: dogs use the vanilla paw print or a colored dog icon; horses use a horse-head symbol or a colored horse icon
+description=[*] [b]Markers left alone[/b]: third-party MODs' own markers keep working
+description=[*] [b]Inactive when absent[/b]: without the matching MOD, no extra options and no errors
+description=[*] [b]No third-party assets[/b]: contains no third-party code, models, textures or sounds
 description=[/list]
 description=📖 [b]Supported behavior, multiplayer notes, and how to request support:[/b] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817848926]MiniMap - MOD Compatibility Guide: Supported Mods, Multiplayer & FAQ[/url]
 description=
@@ -37,8 +42,9 @@ description=[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763
 description=[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763914102]MOD Maps[/url] — map images and street-name translations for map mods
 description=[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3792675881]AutoDrive[/url] — GPS navigation and autonomous driving
 description=[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3768276209]Zones[/url] — custom server zones
-description=[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411]MOD Compatibility[/url] — icons for third-party animals such as dogs and horses
+description=[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411]MOD Compatibility[/url] — animals, NPCs, outposts and airdrops from third-party mods
 description=[/list]
+description=More mods: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3809297109]Minidoracat Mods for B42 collection[/url]
 description=
 description=[h2]💬 Feedback & community[/h2]
 description=[list]
