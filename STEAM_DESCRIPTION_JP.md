@@ -34,15 +34,8 @@
 [/list]
 📖 [b]対応内容の詳細、マルチプレイの注意、対応リクエストの方法：[/b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817848926]MiniMap - MOD Compatibility Guide: Supported Mods, Multiplayer & FAQ[/url]（英語）
 
-[h2]🔗 Minidoracat ミニマップ シリーズ[/h2]
-[list]
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]MiniMap[/url]（本体・必須）——画像化したワールドマップとミニマップ、検索、ナビ
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763914102]MOD Maps[/url]——マップ MOD の地図画像と道路名の翻訳
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3792675881]AutoDrive[/url]——GPS ナビと自動運転
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3768276209]Zones[/url]——サーバー独自のエリア表示
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411]MOD Compatibility[/url]——他 MOD の動物、NPC、前哨基地、エアドロップ
-[/list]
-その他の MOD：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3809297109]Minidoracat 全シリーズ コレクション[/url]
+[h2]🔗 Minidoracat の MOD 一覧[/h2]
+すべての MOD を[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3809297109]Minidoracat 全シリーズ コレクション[/url]にまとめています。必要なものを選んでサブスクライブしてください。
 
 [h2]💬 報告・交流[/h2]
 [list]
