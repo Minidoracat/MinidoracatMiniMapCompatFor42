@@ -106,6 +106,11 @@ def file_lines(paths):
     return out
 
 
+def where(paths, limit=3):
+    shown = ", ".join(f"`{p}`" for p in paths[:limit])
+    return shown + (f" 等 {len(paths)} 檔" if len(paths) > limit else "")
+
+
 def render(c, run_url):
     """產生 issue 標題、內文與去重標記。內文只有路徑、數量、契約字串，沒有上游檔案內容。"""
     wid = c["wid"]
@@ -149,10 +154,10 @@ def render(c, run_url):
         body.append("⚠ 沒有下載到檔案，無法檢查。")
     for x in contracts or []:
         if x["found_in"]:
-            moved = "" if not x["acked_files"] or sorted(x["found_in"]) == sorted(x["acked_files"]) else f"（核對時在 {', '.join(f'`{f}`' for f in x['acked_files'])}）"
-            body.append(f"- ✅ 還在：`{x['text']}` → {', '.join(f'`{f}`' for f in x['found_in'])}{moved}　— {x['why']}")
+            moved = "" if not x["acked_files"] or sorted(x["found_in"]) == sorted(x["acked_files"]) else f"（核對時在 {where(x['acked_files'])}）"
+            body.append(f"- ✅ 還在：`{x['text']}` → {where(x['found_in'])}{moved}　— {x['why']}")
         else:
-            body.append(f"- ⚠ **不見了**：`{x['text']}`（核對時在 {', '.join(f'`{f}`' for f in x['acked_files'])}）　— {x['why']}")
+            body.append(f"- ⚠ **不見了**：`{x['text']}`（核對時在 {where(x['acked_files'])}）　— {x['why']}")
     if missing:
         body += ["", f"⚠ {len(missing)} 條契約字串不見，本包對應的功能很可能已經失效。"]
     body += ["", "## 重核要點", c.get("recheck") or "（未填）", "",
