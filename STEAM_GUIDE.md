@@ -1,7 +1,7 @@
 <!-- 指南網址：https://steamcommunity.com/sharedfiles/filedetails/?id=3817848780 -->
 <!-- Steam 指南稿源（繁中）：MOD 的完整說明以本指南為準，簡介只放摘要；許願留在原說明串。格式與同步方式見 pz-family-docs/release.md「完整說明：Steam 指南」 -->
 <!-- 標題：📖 小地圖 - MOD 相容包 完整說明：支援的 MOD、多人注意與常見問題 -->
-<!-- 摘要：Minidoracat 小地圖 MOD 相容包的圖文說明：支援哪些第三方 MOD、狗與馬在地圖上的實際行為、Bandits 與 Project A-Life 的 NPC 換色、多人注意事項、常見問題、原作者與素材邊界，以及支援新 MOD 的評估原則。 -->
+<!-- 摘要：Minidoracat 小地圖 MOD 相容包的圖文說明：支援哪些第三方 MOD、狗與馬在地圖上的實際行為、Bandits 與 Project A-Life 的 NPC 換色、Dynamic Outposts 前哨站與 Random Airdrops 空投的地圖標記、多人注意事項、常見問題、原作者與素材邊界，以及支援新 MOD 的評估原則。 -->
 === 🚀 快速上手
 [b]English version:[/b] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817848926]MiniMap - MOD Compatibility Guide[/url]
 
@@ -12,10 +12,11 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411
 [*] [b]開啟動物圖標[/b]：在主 MOD 的動物圖標設定中開啟（預設是關閉的）。
 [*] [b]個別開關[/b]：物種篩選會出現「狗（附近已載入）」「馬（附近已載入）」。
 [*] [b]NPC 換色[/b]：開啟主 MOD 的「在小地圖顯示殭屍點位」（預設關），Bandits 與 Project A-Life 的 NPC 就會在殭屍點位裡用自己的顏色。
+[*] [b]前哨站與空投[/b]：不用設定，啟用 Dynamic Outposts 或 Random Airdrops HF 後就會畫在小地圖。
 [/olist]
 [list]
 [*] [b]遊戲版本[/b]：跟隨主 MOD（目前需 Build 42.21.0 以上）。
-[*] [b]模式[/b]：單機與多人都能用。
+[*] [b]模式[/b]：單機與多人都能用（Random Airdrops HF 本身只支援單機）。
 [/list]
 === 🧰 目前支援
 [table]
@@ -24,6 +25,8 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411
 [tr][td][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod [B42.14+/MP SOON][/url][/td][td]Horse[/td][td]物種篩選加入 horse[/td][td]本包馬頭符號、彩色馬圖[/td][/tr]
 [tr][td][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3268487204][B42] Bandits NPC[/url][/td][td]Bandits2[/td][td]殭屍點位裡的 NPC 換色[/td][td]預設天藍[/td][/tr]
 [tr][td][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3803984183]Project A-Life [ALIFE NPCS][/url][/td][td]ProjectALifeNPCs[/td][td]殭屍點位裡的 NPC 換色[/td][td]預設綠（只啟用它時是天藍）[/td][/tr]
+[tr][td][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3791152383]Dynamic Outposts[/url][/td][td]claimableoutposts_dynamic_hordes[/td][td]看得到的前哨站與感染點畫在小地圖[/td][td]物資類型圖示，米色／綠／紅底；感染點紅框骷髏[/td][/tr]
+[tr][td][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3789197845]Random Airdrops HF[/url][/td][td]RandomAirdropsHF[/td][td]空投落點畫在小地圖與世界地圖（只有單機）[/td][td]本包黃框空投圖示[/td][/tr]
 [/table]
 [h3]沒裝對應 MOD 時[/h3]
 [list]
@@ -32,9 +35,9 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411
 [/list]
 [h3]原作者與素材邊界[/h3]
 [list]
-[*] [b]原作者[/b]：Companion Dogs、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url]、Bandits 與 Project A-Life 分屬各自的原作者（團隊）。
+[*] [b]原作者[/b]：Companion Dogs、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url]、Bandits、Project A-Life、Dynamic Outposts 與 Random Airdrops HF 分屬各自的原作者（團隊）。
 [*] [b]必須搭配原始 MOD[/b]：本包不複製或重包第三方 MOD 的程式、模型、貼圖或音效。
-[*] [b]自製素材[/b]：狗與馬的彩圖、馬頭符號都是本相容包自行製作的。NPC 換色不用任何圖片。
+[*] [b]自製素材[/b]：狗與馬的彩圖、馬頭符號、空投與感染點圖示都是本相容包自行製作的；前哨站圖示借用主 MOD 的資源點圖示。NPC 換色不用任何圖片。
 [/list]
 === 🧰 Companion Dogs
 {{img:01-symbol-zh.jpg}}
@@ -67,10 +70,34 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411
 [*] [b]需要主 MOD 新版[/b]：主 MOD 要是支援 NPC 換色的版本；太舊時 NPC 照殭屍色顯示，狗與馬的支援照常。
 [*] [b]不做[/b]：Bandits 的據點、全地圖遊蕩隊、敵友分色。本包不讀這兩個 MOD 的私有資料，也不呼叫它們的程式。
 [/list]
+=== 🧰 Dynamic Outposts
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3791152383]Dynamic Outposts[/url]（Mod ID：[b]claimableoutposts_dynamic_hordes[/b]）
+[list]
+[*] [b]原本的樣子[/b]：前哨站與感染區只畫在世界地圖，小地圖上沒有。
+[*] [b]本包加上的[/b]：照它自己的規則，把你看得到的前哨站畫在小地圖：走近發現過的、伺服器設定全部顯示時的全部，以及你有權限的已佔領前哨站。
+[*] [b]圖示[/b]：依物資類型借用主 MOD 的資源點圖示；底色比照它的世界地圖，一般米色、已佔領綠、強盜佔據紅。作用中的感染點畫成紅框骷髏。
+[*] [b]只畫小地圖[/b]：世界地圖維持 Dynamic Outposts 自己的圖示。它的選項「Show outpost map icons」關掉時，小地圖也不畫。
+[*] [b]大小[/b]：跟主 MOD 的「標記大小（家、收藏、導航、搜尋）」設定。
+[/list]
+=== 🧰 Random Airdrops HF
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3789197845]Random Airdrops HF[/url]（Mod ID：[b]RandomAirdropsHF[/b]）
+[list]
+[*] [b]原本的樣子[/b]：無線電只報地名，落點要自己在地圖上標。
+[*] [b]本包加上的[/b]：飛機投下空投後，落點在小地圖與世界地圖畫成黃框空投圖示，旁邊寫「空投」。空投被它移除後，標記跟著消失。
+[*] [b]只有單機[/b]：Random Airdrops HF 本身不支援多人，多人時本包不畫任何東西。
+[*] [b]讀檔後[/b]：讀檔前投下的空投不再畫，因為落點只在投下那一刻取得。它預設讀檔時會清掉舊空投，通常沒差。
+[/list]
+[h3]這兩個 MOD 怎麼支援[/h3]
+[list]
+[*] [b]讀它們的內部資料[/b]：這兩個 MOD 沒有給其他 MOD 用的介面，本包直接讀它們的內部資料；Random Airdrops 還要記下飛機投下的位置，它自己的動作照原樣進行。
+[*] [b]它們更新時[/b]：本包每天自動比對這兩個 MOD 在 Steam 上的版本。對不上時本包不畫、只在遊戲紀錄檔留一行，不會讓遊戲出錯，我們再視情況跟著修。
+[/list]
 === ⚠️ 多人注意
 [list]
 [*] [b]伺服器要啟用三者[/b]：主 MOD、第三方 MOD 與本相容包。
 [*] [b]NPC 換色可由伺服器關閉[/b]：沙盒選項「允許 NPC 點位換色」（預設開）關閉時，所有玩家的 NPC 照殭屍色顯示。
+[*] [b]Dynamic Outposts[/b]：多人可用，用的是伺服器送給你的前哨站資料。
+[*] [b]Random Airdrops HF[/b]：它本身不支援多人，多人時沒有空投標記。
 [*] [b]Horse Mod 的多人限制[/b]：相容包本身可用於多人，但 Horse Mod 目前在 Workshop 標示 [b]MP SOON[/b]，其說明也寫明騎乘尚未支援多人。
 [*] [b]不繞過上游限制[/b]：本相容功能不會改變或繞過 Horse Mod 的多人限制。
 [/list]
@@ -97,14 +124,25 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411
 [*] 在主 MOD「動物圖標」物種篩選取消「狗」。
 [*] Companion Dogs 的 marker 不受影響。
 [/list]
+[h3]Dynamic Outposts 的前哨站沒出現在小地圖？[/h3]
+[list]
+[*] 只畫你看得到的前哨站：世界地圖上沒有的，小地圖也不畫，先走近發現它。
+[*] 確認 Dynamic Outposts 的選項「Show outpost map icons」有開。
+[*] 遊戲紀錄檔有 [MinidoracatMiniMapCompat] 開頭的訊息時，可能是 Dynamic Outposts 更新後對不上，請回報。
+[/list]
+[h3]沒看到空投標記？[/h3]
+[list]
+[*] 只在單機有效，要等飛機投下後才出現。
+[*] 讀檔前投下的空投，讀檔後不畫。
+[/list]
 === 💬 想支援其他 MOD
 想支援其他 MOD，請到原串照格式許願：[url=https://steamcommunity.com/workshop/filedetails/discussion/3765182411/586187095760055679/]相容包說明＆支援許願[/url]
 [h3]評估原則[/h3]
 [list]
 [*] [b]原版資料優先[/b]：優先使用遊戲已同步、可安全辨識的原版物件資料。
 [*] [b]不複製素材[/b]：不複製或重包第三方 MOD 的程式、模型、貼圖、音效。
-[*] [b]不繞過上游設計[/b]：不繞過上游 MOD 的權限、私有狀態或多人同步設計。
-[*] [b]等作者合作[/b]：需要上游作者提供公開 API 或授權時，會先等待作者合作，不猜測實作。
+[*] [b]只讀不改[/b]：只讀那個 MOD 的資料，不改它的資料，也不繞過它的權限與多人同步。
+[*] [b]沒有公開介面也能支援[/b]：本包可以讀它的內部資料，並每天自動比對上游版本；對不上時先不畫。
 [*] [b]優先度[/b]：同一 MOD 的需求越多，研究優先度越高，但不保證一定可行。
 [/list]
 === 💬 回報方式

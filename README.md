@@ -3,9 +3,10 @@
 **By Minidoracat**
 
 [Minidoracat MiniMap](../MinidoracatMiniMapFor42) 的第三方 MOD 相容包。
-每個 adapter 只把已確認的資料登記到主 MOD 的公開 API：動物 MOD 登記原版物件群組，提供有名稱、
-可個別開關的物種篩選項；NPC MOD 登記它掛在 NPC 身上的動畫變數，讓殭屍點位裡的 NPC 換成自己的顏色。
-不複製第三方程式或素材，也不接管第三方 MOD 自己的地圖標記。本包只內含自行製作的相容圖標。
+每個 adapter 只經主 MOD 的公開 API 提供資料：動物 MOD 登記原版物件群組，提供有名稱、可個別開關的物種篩選項；
+NPC MOD 登記它掛在 NPC 身上的動畫變數，讓殭屍點位裡的 NPC 換成自己的顏色；Dynamic Outposts 的前哨站與
+Random Airdrops HF 的空投畫成地圖標記。不複製第三方程式或素材，也不接管第三方 MOD 自己的地圖標記。
+本包只內含自行製作的相容圖標。
 
 ## 目前支援
 
@@ -15,6 +16,8 @@
 | Horse Mod [B42.14+/MP SOON] | [3661336777](https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777) | `Horse` | 將 `horse` 加入物種篩選；提供本包自製的馬符號與彩圖 |
 | [B42] Bandits NPC | [3268487204](https://steamcommunity.com/sharedfiles/filedetails/?id=3268487204) | `Bandits2` | 殭屍點位裡的 Bandits NPC 換成自己的顏色（預設天藍） |
 | Project A-Life [ALIFE NPCS] | [3803984183](https://steamcommunity.com/sharedfiles/filedetails/?id=3803984183) | `ProjectALifeNPCs` | 殭屍點位裡的 A-Life NPC 換成自己的顏色（預設綠；只啟用它時是天藍） |
+| Dynamic Outposts | [3791152383](https://steamcommunity.com/sharedfiles/filedetails/?id=3791152383) | `claimableoutposts_dynamic_hordes` | 你看得到的前哨站與感染點也畫在小地圖 |
+| Random Airdrops HF | [3789197845](https://steamcommunity.com/sharedfiles/filedetails/?id=3789197845) | `RandomAirdropsHF` | 空投落點畫在小地圖與世界地圖（只有單機，該 MOD 不支援多人） |
 
 ### Companion Dogs 的顯示行為
 
@@ -46,33 +49,60 @@
   NPC 照殭屍色顯示，狗與馬的支援照常。
 - 不做：Bandits 的據點、全地圖遊蕩隊、敵友分色。本包不讀兩個 MOD 的私有資料，也不呼叫它們的程式。
 
+### Dynamic Outposts 的顯示行為
+
+- Dynamic Outposts 在世界地圖上畫前哨站與感染區，小地圖上沒有。本包照它自己的規則，把你看得到的前哨站
+  （走近發現過、伺服器設定全部顯示，或你有權限的已佔領前哨站）畫在小地圖，圖示依物資類型借用主 MOD 的資源點圖示；
+  底色比照它的世界地圖：一般米色、已佔領綠、強盜佔據紅。作用中的感染點畫成紅框骷髏。
+- 只畫小地圖；世界地圖維持 Dynamic Outposts 自己的圖示。它的選項「Show outpost map icons」關掉時，本包也不畫。
+- 標記大小跟主 MOD 的「標記大小（家、收藏、導航、搜尋）」設定。單機與多人都可用（多人讀伺服器送給客戶端的前哨站資料）。
+
+### Random Airdrops HF 的顯示行為
+
+- 飛機投下空投時，落點畫成黃框空投圖示（附「空投」名稱），小地圖與世界地圖都有；空投被它移除後標記跟著消失。
+- 只在單機有效：Random Airdrops HF 本身不支援多人（伺服器直接呼叫客戶端函式），多人時本包不畫任何東西。
+- 讀檔後，讀檔前投下的空投不再畫（座標只在投下那一刻取得）；它預設在讀檔時清掉舊空投，所以通常沒差。
+
+### 讀第三方私有資料與上游監看
+
+Dynamic Outposts 與 Random Airdrops HF 沒有給其他 MOD 用的介面，本包直接讀它們的內部資料（Random Airdrops
+另外包住 `RandomAirdrops.FlyOver` 記下座標，照原樣呼叫原函式）。依賴的每個名稱都登記在 `upstream.json`，
+GitHub Action（`.github/workflows/upstream-watch.yml`）每天比對 Steam 上的版本，有更新就開 issue，列出變動的檔案與
+哪些名稱不見了；不是每次更新都要跟著改。對不上時本包不畫、只在遊戲紀錄檔留一行，不會讓遊戲出錯。
+
 ## 安裝與依賴
 
 - 必要：`MinidoracatMiniMapFor42`（`mod.info` 以 `require=` 保證先載入）。
-- 選用：`CompanionDogs`、`Horse`、`Bandits2`、`ProjectALifeNPCs`。各自未啟用時安靜 no-op，不新增對應選項、不產生錯誤。
-- 遊戲版本跟隨主 MOD（目前需 Build 42.21.0 以上）；單機與多人皆可用。多人伺服器需啟用主 MOD、第三方 MOD與本相容包。
+- 選用：`CompanionDogs`、`Horse`、`Bandits2`、`ProjectALifeNPCs`、`claimableoutposts_dynamic_hordes`、`RandomAirdropsHF`。
+  各自未啟用時安靜 no-op，不新增對應選項、不產生錯誤。
+- 遊戲版本跟隨主 MOD（目前需 Build 42.21.0 以上）；單機與多人皆可用（Random Airdrops HF 本身只支援單機）。
+  多人伺服器需啟用主 MOD、第三方 MOD與本相容包。
 - no-steam 本機伺服器的 `Mods=` 順序：
-  `MinidoracatMiniMapFor42;CompanionDogs;Horse;Bandits2;ProjectALifeNPCs;MinidoracatMiniMapCompatFor42`。
+  `MinidoracatMiniMapFor42;CompanionDogs;Horse;Bandits2;ProjectALifeNPCs;claimableoutposts_dynamic_hordes;RandomAirdropsHF;MinidoracatMiniMapCompatFor42`。
 - `link_workshop.bat` 卸載只歸檔本相容包的受管副本，不移除主 MOD、CompanionDogs、Horse 或其他 MOD。
 
 ## 為什麼獨立專案
 
-主 MOD 維持通用的地圖、`IsoAnimal` 與殭屍點位顯示能力；第三方 MOD 的名稱、群組、NPC 變數、測試與相容說明集中在
-本專案。未來某個第三方 MOD 更新或移除時，可以單獨調整 adapter，不必把第三方耦合帶進
-主 MOD。相容包本身仍保持資料導向：只有靜態的群組與 NPC 變數登記、自有圖標，不需要 callback、provider
-或額外繪製 hook。
+主 MOD 維持通用的地圖、`IsoAnimal`、殭屍點位與地圖標記能力；第三方 MOD 的名稱、群組、NPC 變數、資料讀法、測試與相容說明
+集中在本專案。未來某個第三方 MOD 更新或移除時，可以單獨調整 adapter，不必把第三方耦合帶進主 MOD。
+群組與 NPC 變數是靜態登記；前哨站與空投經主 MOD 的 marker provider 畫，本包不另掛地圖繪製 hook。
 
 ## 專案結構
 
 ```text
 MinidoracatMiniMapCompatFor42/
+├── .github/workflows/upstream-watch.yml  # 每天比對支援的第三方 MOD 有沒有更新，有就開 issue
+├── upstream.json                       # 每個支援的第三方 MOD：本包依賴的名稱、要看的檔、上次核對的版本
+├── upstream/<Workshop ID>.files.json   # 上次核對時對方每個檔的 SHA-256（不存對方檔案內容）
 ├── STEAM_DESCRIPTION*.md
 ├── STEAM_DISCUSSION_guide*.md      # 說明＆許願串（繁中／EN）
 ├── STEAM_DISCUSSION_wishlist.md    # 舊許願串的指路文
 ├── link_workshop.bat
 ├── PZ_Test.bat
 ├── scripts/
+│   ├── check_upstream.py           # 上游監看的檢查與 --ack
 │   ├── link_workshop.ps1
+│   ├── make_marker_icons.py        # 產生 marker_disc／infested／airdrop 三張標記貼圖
 │   ├── PZ_Test.ps1
 │   └── test_companion_dogs_compat.lua
 └── MOD/MinidoracatMiniMapCompatFor42/Contents/mods/MinidoracatMiniMapCompatFor42/42/
@@ -82,7 +112,7 @@ MinidoracatMiniMapCompatFor42/
         │   ├── client/MinidoracatMiniMapCompat.lua
         │   └── shared/Translate/<16 個語系：AR,CH,CN,DE,EN,ES,ES_CL,ES_MX,FR,JP,KO,PL,PT,PTBR,RU,TR>/UI.json
         ├── textures/Item_MinidoracatMiniMapCompat_{Dog,Horse}.png
-        └── ui/MinidoracatMiniMapCompat/map_horse.png
+        └── ui/MinidoracatMiniMapCompat/{map_horse,marker_disc,infested,airdrop}.png
 ```
 
 ## 測試
@@ -112,6 +142,7 @@ uv run --no-project python -B scripts/publish_workshop.py --mode all --dry-run  
 
 ## 授權
 
-本專案自有程式碼、設定與圖標以 [MIT License](LICENSE) 釋出。Companion Dogs 與
-[Horse Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777) 的程式及素材均不包含在
-本專案內，權利與使用規範屬各自原作者；Horse Mod 仍是必要的原始內容來源。
+本專案自有程式碼、設定與圖標以 [MIT License](LICENSE) 釋出。Companion Dogs、
+[Horse Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777)、Bandits、Project A-Life、Dynamic Outposts
+與 Random Airdrops HF 的程式及素材均不包含在本專案內，權利與使用規範屬各自原作者；Horse Mod 仍是必要的原始內容來源。
+前哨站圖示在執行時借用主 MOD 的資源點圖示（同作者、MIT），本包不另附。

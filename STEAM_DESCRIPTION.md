@@ -3,7 +3,7 @@
 
 [hr][/hr]
 
-小地圖的第三方 MOD 相容包，讓其他 MOD 加入的狗、馬等動物在地圖上有自己的名稱、圖標與篩選開關，也讓 Bandits、Project A-Life 的 NPC 在殭屍點位裡換成自己的顏色。
+小地圖的第三方 MOD 相容包，讓其他 MOD 的動物、NPC、前哨站與空投也出現在你的地圖上。
 
 [h2]📦 需要安裝[/h2]
 [list]
@@ -19,13 +19,14 @@
 [*] 訂閱並啟用主 MOD、本相容包與要支援的第三方 MOD
 [*] 在主 MOD 的動物圖標設定中開啟動物圖標
 [*] 物種篩選會出現「狗（附近已載入）」「馬（附近已載入）」，可個別開關
-[*] 要看 NPC 換色：開啟主 MOD 的「在小地圖顯示殭屍點位」；地圖顯示設定的「殭屍」分類可以改每個 NPC MOD 的顏色
+[*] 要看 NPC 換色，開啟主 MOD 的「在小地圖顯示殭屍點位」
 [/olist]
 
 [h2]✨ 主要功能[/h2]
 [list]
-[*] [b]支援的 MOD[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3268487204]Bandits[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3803984183]Project A-Life[/url]
-[*] [b]NPC 換色[/b]：Bandits 與 Project A-Life 的 NPC 在殭屍點位裡改用各自的顏色（預設天藍、綠），畫在殭屍點上面；需要主 MOD 支援 NPC 換色的新版
+[*] [b]支援的 MOD[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3268487204]Bandits[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3803984183]Project A-Life[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3791152383]Dynamic Outposts[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3789197845]Random Airdrops HF[/url]
+[*] [b]NPC 換色[/b]：Bandits 與 Project A-Life 的 NPC 在殭屍點位裡換成各自的顏色
+[*] [b]前哨站與空投[/b]：前哨站、感染點與空投落點也畫在小地圖
 [*] [b]專屬圖標[/b]：狗用原版爪印或彩色狗圖，馬用馬頭符號或彩色馬圖
 [*] [b]不接管 marker[/b]：第三方 MOD 自己的 marker 照常運作
 [*] [b]沒裝就不作用[/b]：沒裝對應 MOD 時不增加選項，也不產生錯誤
@@ -39,7 +40,7 @@
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763914102]MOD Maps[/url]——地圖 MOD 的地圖圖片與路名翻譯
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3792675881]AutoDrive[/url]——GPS 導航與自動駕駛
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3768276209]Zones[/url]——伺服器自訂區域
-[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411]MOD Compatibility[/url]——狗、馬等第三方動物圖標，Bandits 等 NPC 換色
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411]MOD Compatibility[/url]——第三方 MOD 的動物、NPC、前哨站與空投
 [/list]
 其他作品：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3809297109]Minidoracat 全系列收藏[/url]
 
