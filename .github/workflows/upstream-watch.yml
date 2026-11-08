@@ -1,0 +1,121 @@
+name: upstream-watch
+
+on:
+  schedule:
+    - cron: "23 3 * * *"   # 每天 UTC 03:23（台灣 11:23）
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "空白分隔的 Workshop ID，當作有更新跑完整流程（測試用）"
+        required: false
+        default: ""
+      dry_run:
+        description: "true＝只把要開的 issue／留言印在 log，不寫 GitHub"
+        type: boolean
+        default: false
+
+permissions:
+  issues: write
+  contents: read
+
+env:
+  FORCE: ${{ github.event.inputs.force }}
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # 第 1 層：時間戳（Steam 公開 API）。這是開 issue 的唯一觸發；下載失敗也照開。
+      - name: 查 Steam 上游時間戳
+        id: ts
+        run: |
+          python scripts/check_upstream.py --report report.json --force "$FORCE" || [ $? -eq 3 ]
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          r = json.load(open("report.json"))
+          print("count=" + str(len(r)))
+          print("wids=" + " ".join(c["wid"] for c in r if c["status"] == "updated"))
+          PY
+
+      # 第 2 層：只有要比對的才裝 SteamCMD 匿名下載。檔案只留在 runner，不進 repo、不進 artifact。
+      - name: 安裝 SteamCMD
+        if: steps.ts.outputs.wids != ''
+        run: |
+          sudo dpkg --add-architecture i386
+          sudo apt-get update -q
+          sudo apt-get install -y -q lib32gcc-s1
+          mkdir -p "$HOME/steamcmd"
+          curl -sqL https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz | tar -zx -C "$HOME/steamcmd"
+
+      - name: 匿名下載（每個最多重試 3 次）
+        if: steps.ts.outputs.wids != ''
+        run: |
+          mkdir -p ws
+          for wid in ${{ steps.ts.outputs.wids }}; do
+            for try in 1 2 3; do
+              "$HOME/steamcmd/steamcmd.sh" +force_install_dir "$PWD/ws" +login anonymous +workshop_download_item 108600 "$wid" +quit || true
+              if [ -d "ws/steamapps/workshop/content/108600/$wid" ]; then echo "ok $wid"; break; fi
+              echo "retry $wid ($try)"; sleep 20
+            done
+          done
+          ls ws/steamapps/workshop/content/108600 || echo "（全部下載失敗，issue 仍會開）"
+
+      # 第 3 層：檔案清單（hash）差異＋契約字串還在不在。報告只有路徑與數量，不含對方程式碼。
+      - name: 檔案與契約字串比對
+        if: steps.ts.outputs.wids != ''
+        run: python scripts/check_upstream.py --report report.json --source ws/steamapps/workshop/content/108600 --force "$FORCE" || [ $? -eq 3 ]
+
+      - name: 上傳報告
+        if: steps.ts.outputs.count != '0'
+        uses: actions/upload-artifact@v4
+        with:
+          name: upstream-report
+          path: report.json
+
+      # 每個 wid 最多一則 open issue；同一個 time_updated 只通知一次（看 issue 內文與留言裡的隱藏標記）。
+      - name: 開 issue／留言
+        if: steps.ts.outputs.count != '0'
+        uses: actions/github-script@v7
+        env:
+          DRY_RUN: ${{ github.event.inputs.dry_run }}
+        with:
+          script: |
+            const fs = require('fs');
+            const report = JSON.parse(fs.readFileSync('report.json', 'utf8'));
+            const dry = process.env.DRY_RUN === 'true';
+            const repo = { owner: context.repo.owner, repo: context.repo.repo };
+            const LABEL = 'upstream-update';
+            if (!dry) {
+              try { await github.rest.issues.getLabel({ ...repo, name: LABEL }); }
+              catch (e) {
+                if (e.status !== 404) throw e;
+                await github.rest.issues.createLabel({ ...repo, name: LABEL, color: 'fbca04', description: '第三方上游 MOD 在 Steam 有更新' });
+              }
+            }
+            const open = await github.paginate(github.rest.issues.listForRepo, { ...repo, state: 'open', labels: LABEL, per_page: 100 });
+            for (const c of report) {
+              const key = `[upstream] ${c.wid} `;
+              const issue = open.find(i => i.title.startsWith(key));
+              let action;
+              if (!issue) action = 'create';
+              else {
+                const comments = await github.paginate(github.rest.issues.listComments, { ...repo, issue_number: issue.number, per_page: 100 });
+                const seen = (issue.body || '').includes(c.marker) || comments.some(m => (m.body || '').includes(c.marker));
+                action = seen ? 'skip' : 'comment';
+              }
+              const where = issue ? ` #${issue.number}` : '';
+              if (dry || action === 'skip') {
+                core.info(`${dry ? '[dry_run] ' : ''}${action}${where}: ${c.issue_title}`);
+                if (dry && action !== 'skip') core.info(`----- 標題 -----\n${c.issue_title}\n----- 內文 -----\n${c.issue_body}\n----------------`);
+                continue;
+              }
+              if (action === 'create') {
+                const r = await github.rest.issues.create({ ...repo, title: c.issue_title, body: c.issue_body, labels: [LABEL] });
+                core.info(`opened #${r.data.number}: ${c.issue_title}`);
+              } else {
+                await github.rest.issues.createComment({ ...repo, issue_number: issue.number, body: `### ${c.issue_title}\n\n${c.issue_body}` });
+                core.info(`commented #${issue.number}: ${c.issue_title}`);
+              }
+            }

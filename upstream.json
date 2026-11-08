@@ -1,0 +1,467 @@
+{
+  "_doc": "本包讀或依賴的第三方 Workshop MOD，每個登記一筆。acked_time_updated＝最後一次核對時 Steam 的 time_updated；upstream/<wid>.files.json＝當時全 MOD 的「相對路徑→SHA-256」（不存檔案內容）；contracts＝本包依賴的字串與它們當時出現的檔。scripts/check_upstream.py 與 .github/workflows/upstream-watch.yml 拿它們比對；核對完跑 python scripts/check_upstream.py --ack <wid> --source <workshop content 根>。",
+  "upstreams": [
+    {
+      "wid": "3740052292",
+      "mod_id": "CompanionDogs",
+      "name": "Companion Dogs",
+      "used_by": "動物 group 登記：registerAnimalGroup(\"dog\")（MinidoracatMiniMapCompat.lua registerIfActive）",
+      "watch_files": [
+        "mods/CompanionDogs/42/media/lua/shared/Definitions/animal/DogDefinitions.lua"
+      ],
+      "contracts": [
+        {
+          "text": "id=CompanionDogs",
+          "files": [
+            "mods/CompanionDogs/42/mod.info"
+          ],
+          "why": "isModActive 用這個 mod id 判斷要不要登記"
+        },
+        {
+          "text": "a.group = \"dog\"",
+          "files": [
+            "mods/CompanionDogs/42/media/lua/shared/Definitions/animal/DogDefinitions.lua"
+          ],
+          "why": "本包登記的動物 group 名稱；改名小地圖就認不得狗"
+        }
+      ],
+      "recheck": "mod id 與 AnimalDefinitions 裡狗的 group 是否仍是 dog；新增其他狗種時確認也走同一個 group。",
+      "acked_time_updated": 1791251330,
+      "acked_title": "Companion Dogs [ALPHA]"
+    },
+    {
+      "wid": "3661336777",
+      "mod_id": "Horse",
+      "name": "Horse",
+      "used_by": "動物 group 登記：registerAnimalGroup(\"horse\")（MinidoracatMiniMapCompat.lua registerIfActive）",
+      "watch_files": [
+        "mods/HorseMod/42/media/lua/shared/HorseMod/definitions/HorseDefinitions.lua"
+      ],
+      "contracts": [
+        {
+          "text": "id=Horse",
+          "files": [
+            "mods/HorseMod/42/mod.info"
+          ],
+          "why": "isModActive 用這個 mod id 判斷要不要登記"
+        },
+        {
+          "text": "group = \"horse\"",
+          "files": [
+            "mods/HorseMod/42/media/lua/shared/HorseMod/definitions/HorseDefinitions.lua"
+          ],
+          "why": "本包登記的動物 group 名稱；改名小地圖就認不得馬"
+        }
+      ],
+      "recheck": "mod id 與 HorseDefinitions 裡的 group 是否仍是 horse。",
+      "acked_time_updated": 1787504703,
+      "acked_title": "Horse Mod [B42.20+/MP]"
+    },
+    {
+      "wid": "3268487204",
+      "mod_id": "Bandits2",
+      "name": "Bandits",
+      "used_by": "NPC 標記：registerNpcTag(\"bandits\")，讀殭屍動畫變數 Bandit（MinidoracatMiniMapCompat.lua registerNpcIfActive）",
+      "watch_files": [
+        "mods/Bandits/42.21/media/lua/client/BanditUpdate.lua"
+      ],
+      "contracts": [
+        {
+          "text": "id=Bandits2",
+          "files": [
+            "mods/Bandits/42.20/mod.info",
+            "mods/Bandits/42.21/mod.info"
+          ],
+          "why": "isModActive 用這個 mod id 判斷要不要登記"
+        },
+        {
+          "text": "setVariable(\"Bandit\", true)",
+          "files": [
+            "mods/Bandits/42.20/media/lua/client/BanditUpdate.lua",
+            "mods/Bandits/42.21/media/lua/client/BanditUpdate.lua"
+          ],
+          "why": "殭屍變成強盜時設的動畫變數；本包靠它認出強盜"
+        }
+      ],
+      "recheck": "BanditUpdate.lua 是否仍在殭屍轉成強盜時 setVariable(\"Bandit\", true)、移除時設回 false；新增高於 42.21 的版本目錄要改看那一份。",
+      "acked_time_updated": 1793832710,
+      "acked_title": "[B42] Bandits NPC"
+    },
+    {
+      "wid": "3803984183",
+      "mod_id": "ProjectALifeNPCs",
+      "name": "Project A-Life",
+      "used_by": "NPC 標記：registerNpcTag(\"alife\")，讀殭屍動畫變數 ALifeActor（MinidoracatMiniMapCompat.lua registerNpcIfActive）",
+      "watch_files": [
+        "mods/ProjectALifeNPCs/42.20/media/lua/client/ProjectALife/Shells/ALifeAnimationClient.lua",
+        "mods/ProjectALifeNPCs/42.20/media/lua/server/ProjectALife/Shells/ALifeShellAdapter.lua",
+        "mods/ProjectALifeNPCs/42.20/media/lua/shared/ProjectALife/Shells/ALifeAIFence.lua"
+      ],
+      "contracts": [
+        {
+          "text": "id=ProjectALifeNPCs",
+          "files": [
+            "mods/ProjectALifeNPCs/42.20/mod.info"
+          ],
+          "why": "isModActive 用這個 mod id 判斷要不要登記"
+        },
+        {
+          "text": "setVariable(shell, \"ALifeActor\", true)",
+          "files": [
+            "mods/ProjectALifeNPCs/42.20/media/lua/client/ProjectALife/Shells/ALifeAnimationClient.lua",
+            "mods/ProjectALifeNPCs/42.20/media/lua/server/ProjectALife/Shells/ALifeShellAdapter.lua"
+          ],
+          "why": "MP 客戶端（ALifeAnimationClient）與單機（ALifeShellAdapter）把殭屍殼標成 NPC 的動畫變數"
+        },
+        {
+          "text": "SetVariable(\"ALifeActor\", \"true\")",
+          "files": [
+            "mods/ProjectALifeNPCs/42.20/media/lua/shared/ProjectALife/Shells/ALifeAIFence.lua"
+          ],
+          "why": "ALifeAIFence 重設殼狀態時補設的同一個變數"
+        }
+      ],
+      "recheck": "三處設 ALifeActor 的地方（MP 客戶端、單機、AIFence）是否仍在；變數名改了或改用別的標記，本包的 NPC 標記會全部消失；新增高於 42.20 的版本目錄要改看那一份。",
+      "acked_time_updated": 1792779018,
+      "acked_title": "Project A-Life [ALIFE NPCS]"
+    },
+    {
+      "wid": "3791152383",
+      "mod_id": "claimableoutposts_dynamic_hordes",
+      "name": "Dynamic Outposts",
+      "used_by": "小地圖畫前哨站與感染點：registerMarkerProvider 讀 ClaimableOutposts 的客戶端快取、ModData 與顯示規則（MinidoracatMiniMapCompat.lua addOutposts）",
+      "watch_files": [
+        "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_MapIcons.lua",
+        "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_Config.lua",
+        "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_SatelliteOverridePolicy.lua"
+      ],
+      "contracts": [
+        {
+          "text": "id=claimableoutposts_dynamic_hordes",
+          "files": [
+            "mods/Dynamic Outposts/42/mod.info",
+            "mods/Dynamic Outposts/mod.info"
+          ],
+          "why": "isModActive 用這個 mod id"
+        },
+        {
+          "text": "ClaimableOutposts.Client.AuthoritativeMapOutposts",
+          "files": [
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_Client.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_MapIcons.lua"
+          ],
+          "why": "伺服器同步給客戶端的前哨站清單；本包優先讀它"
+        },
+        {
+          "text": "ClaimableOutposts.Config.Outposts",
+          "files": [
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_Client.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_DebugTools.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_HordeMoodle.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_HUD.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_InfectedFog.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_MapIcons.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_WorldVisuals.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_ALifeServer.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_BanditsServer.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_Server.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_Config.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_CrateAutoConnect.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_DynamicHordeSpawner.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_TerritoryProtection.lua"
+          ],
+          "why": "沒有同步清單時改讀設定裡的前哨站清單"
+        },
+        {
+          "text": "ClaimableOutposts.Client.AuthoritativeMapStates",
+          "files": [
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_Client.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_MapIcons.lua"
+          ],
+          "why": "伺服器同步的前哨站狀態快照"
+        },
+        {
+          "text": "ModData.getOrCreate(\"ClaimableOutposts\")",
+          "files": [
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_Client.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_HordeMoodle.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_HUD.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_InfectedFog.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_MapIcons.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_WorldVisuals.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_ALifeServer.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_BanditsServer.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_Server.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_TerritoryProtection.lua"
+          ],
+          "why": "沒有快照時讀這份 global ModData"
+        },
+        {
+          "text": "data.outposts",
+          "files": [
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_Client.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_DebugTools.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_HordeMoodle.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_HUD.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_InfectedFog.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_MapIcons.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_WorldVisuals.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_ALifeServer.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_BanditsServer.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_Server.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_AdminTools.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_CrateAutoConnect.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_DynamicHordeSpawner.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_LocationMigration.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_Mutants.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_RallyPoints.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_TerritoryProtection.lua"
+          ],
+          "why": "ModData 裡前哨站狀態表的欄位名"
+        },
+        {
+          "text": "ClaimableOutposts.Client.DiscoveredMapOutposts",
+          "files": [
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_MapIcons.lua"
+          ],
+          "why": "客戶端已發現前哨站快取（顯示規則用）"
+        },
+        {
+          "text": "ClaimableOutpostsDiscoveredMapOutposts",
+          "files": [
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_DebugTools.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_HUD.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_MapIcons.lua"
+          ],
+          "why": "玩家 ModData 裡已發現前哨站的鍵名"
+        },
+        {
+          "text": "ClaimableOutposts.Client.ServerRevealAllOutposts",
+          "files": [
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_Client.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_MapIcons.lua"
+          ],
+          "why": "伺服器是否全部顯示的旗標"
+        },
+        {
+          "text": "function ClaimableOutposts.GetMapIconsShowAll",
+          "files": [
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_Config.lua"
+          ],
+          "why": "沒有伺服器旗標時用它判斷是否全部顯示"
+        },
+        {
+          "text": "function ClaimableOutposts.GetMapIconsEnabled",
+          "files": [
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_Config.lua"
+          ],
+          "why": "地圖圖示總開關"
+        },
+        {
+          "text": "function ClaimableOutposts.IsPlayerAuthorizedForOutpost",
+          "files": [
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_Config.lua"
+          ],
+          "why": "已佔領前哨站是否對這位玩家顯示"
+        },
+        {
+          "text": "function ClaimableOutposts.IsInfestationPointEligible",
+          "files": [
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_Config.lua"
+          ],
+          "why": "感染點是否算數"
+        },
+        {
+          "text": "ClaimableOutposts.SatelliteOverridePolicy = P",
+          "files": [
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_SatelliteOverridePolicy.lua"
+          ],
+          "why": "感染點停用規則的表名"
+        },
+        {
+          "text": "function P.IsDisabled",
+          "files": [
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_SatelliteOverridePolicy.lua"
+          ],
+          "why": "感染點是否被停用"
+        },
+        {
+          "text": "outpost.center.x",
+          "files": [
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_Client.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_InfectedFog.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_MapIcons.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_WorldVisuals.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_ALifeServer.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_BanditsServer.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_Server.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_BanditsIntegration.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_DynamicHordeSpawner.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_RaidState.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_TerritoryProtection.lua"
+          ],
+          "why": "前哨站中心座標欄位"
+        },
+        {
+          "text": "outpost.infestationPoints",
+          "files": [
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_Client.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_HUD.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_InfectedFog.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_MapIcons.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_Server.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_AdminTools.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_DynamicHordeSpawner.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_EncounterRules.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_LocationMigration.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_SatelliteControl.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_SatelliteOverridePolicy.lua"
+          ],
+          "why": "感染點座標清單欄位"
+        },
+        {
+          "text": "outpost.mapSymbol",
+          "files": [
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_MapIcons.lua"
+          ],
+          "why": "前哨站圖示種類欄位（本包對照成自己的圖示）"
+        },
+        {
+          "text": "state.claimed",
+          "files": [
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_Client.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_DebugTools.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_HordeMoodle.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_HUD.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_InfectedFog.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_MapIcons.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_WorldVisuals.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_ALifeServer.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_BanditsServer.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_Server.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_BanditsIntegration.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_Config.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_CrateAutoConnect.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_EncounterRules.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_HordeLifecyclePolicy.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_Mutants.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_RaidState.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_RallyPoints.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_SatelliteControl.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_TerritoryProtection.lua"
+          ],
+          "why": "已佔領狀態欄位（綠色）"
+        },
+        {
+          "text": "state.banditOccupied",
+          "files": [
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_Client.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_MapIcons.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_ALifeServer.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_BanditsServer.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_Server.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_BanditsIntegration.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_Mutants.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_RallyPoints.lua"
+          ],
+          "why": "強盜佔據狀態欄位（紅色）"
+        },
+        {
+          "text": "state.banditCleared",
+          "files": [
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_Client.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_MapIcons.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_ALifeServer.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_BanditsServer.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_Server.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_BanditsIntegration.lua"
+          ],
+          "why": "強盜已清除狀態欄位"
+        },
+        {
+          "text": "state.infestations",
+          "files": [
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_Client.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_HUD.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_InfectedFog.lua",
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_MapIcons.lua",
+            "mods/Dynamic Outposts/42/media/lua/server/ClaimableOutposts_Server.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_EncounterRules.lua",
+            "mods/Dynamic Outposts/42/media/lua/shared/ClaimableOutposts_LocationMigration.lua"
+          ],
+          "why": "各感染點是否作用中的表"
+        },
+        {
+          "text": "CO_IsOutpostVisibleOnMap",
+          "files": [
+            "mods/Dynamic Outposts/42/media/lua/client/ClaimableOutposts_MapIcons.lua"
+          ],
+          "why": "上游顯示規則函式名（本包照抄它的邏輯）；這個檔改了要重看"
+        }
+      ],
+      "recheck": "ClaimableOutposts_MapIcons.lua 的 CO_IsOutpostVisibleOnMap、CO_GetMapOutposts、CO_GetOutpostStateReadOnly、CO_IsOutpostDiscoveredOnMap、CO_IsInfestationPointActive 判斷有沒有改（本包 addOutposts 照它重寫）；Client 快取欄位、ModData 結構、state 欄位、感染點索引規則與 SatelliteOverridePolicy 是否還一樣。",
+      "acked_time_updated": 1794004866,
+      "acked_title": "Dynamic Outposts"
+    },
+    {
+      "wid": "3789197845",
+      "mod_id": "RandomAirdropsHF",
+      "name": "Random Airdrops HF",
+      "used_by": "空投標記：包住 RandomAirdrops.FlyOver 記下空投座標，並讀全域 SpawnedAirdrops（MinidoracatMiniMapCompat.lua wrapFlyOver／addAirdrops）",
+      "watch_files": [
+        "mods/Random Airdrops HF/42/media/lua/server/airdrop_server.lua",
+        "mods/Random Airdrops HF/42/media/lua/client/airdrop_client.lua"
+      ],
+      "contracts": [
+        {
+          "text": "id=RandomAirdropsHF",
+          "files": [
+            "mods/Random Airdrops HF/42/mod.info",
+            "mods/Random Airdrops HF/mod.info"
+          ],
+          "why": "isModActive 用這個 mod id"
+        },
+        {
+          "text": "function RandomAirdrops.FlyOver",
+          "files": [
+            "mods/Random Airdrops HF/42/media/lua/client/airdrop_client.lua"
+          ],
+          "why": "本包包住的函式（記下空投座標）"
+        },
+        {
+          "text": "RandomAirdrops.FlyOver(spawnArea)",
+          "files": [
+            "mods/Random Airdrops HF/42/media/lua/server/airdrop_server.lua"
+          ],
+          "why": "伺服器呼叫 FlyOver 時傳入的座標表；本包讀 spawnArea.x／y"
+        },
+        {
+          "text": "SpawnedAirdrops = ",
+          "files": [
+            "mods/Random Airdrops HF/42/media/lua/server/airdrop_server.lua",
+            "mods/Random Airdrops HF/media/lua/server/airdrop_server.lua"
+          ],
+          "why": "全域空投清單；本包靠它判斷空投還在不在"
+        },
+        {
+          "text": "index = spawnIndex",
+          "files": [
+            "mods/Random Airdrops HF/42/media/lua/server/airdrop_server.lua",
+            "mods/Random Airdrops HF/media/lua/server/airdrop_server.lua"
+          ],
+          "why": "SpawnedAirdrops 每筆的 index 欄位；本包用它對應座標"
+        },
+        {
+          "text": "RandomAirdrops.spawnIndex",
+          "files": [
+            "mods/Random Airdrops HF/42/media/lua/server/airdrop_server.lua"
+          ],
+          "why": "SpawnedAirdrops 沒有新筆時的 index 後備來源"
+        }
+      ],
+      "recheck": "SpawnAirdrop 是否仍先把 { index = spawnIndex } 放進全域 SpawnedAirdrops、再呼叫 RandomAirdrops.FlyOver(spawnArea)（本包包住 FlyOver 時取 SpawnedAirdrops 最後一筆的 index）；空投被拿走或過期時是否仍從 SpawnedAirdrops 移除；作者若改成支援多人（伺服器送封包給客戶端），本包要改成聽封包。",
+      "acked_time_updated": 1787749575,
+      "acked_title": "Random Airdrops HF"
+    }
+  ]
+}
