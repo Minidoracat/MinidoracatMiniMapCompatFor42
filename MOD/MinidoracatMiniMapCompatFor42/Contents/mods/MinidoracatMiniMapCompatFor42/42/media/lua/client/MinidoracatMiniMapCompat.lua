@@ -193,8 +193,7 @@ local function recordAirdrop(spawnArea)
     local spawned = SpawnedAirdrops
     local last = type(spawned) == "table" and spawned[#spawned]
     local index = type(last) == "table" and last.index
-    if index == nil and type(RandomAirdrops) == "table" then index = RandomAirdrops.spawnIndex end
-    if index ~= nil then drops[index] = { spawnArea.x, spawnArea.y } end
+    if index then drops[index] = { spawnArea.x, spawnArea.y } end
 end
 
 -- 只在 OnGameStart 包一次（每次載入存檔 Lua 會整個重載，不會重複包）
