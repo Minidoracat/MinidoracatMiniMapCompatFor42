@@ -84,7 +84,7 @@
         }
       ],
       "recheck": "BanditUpdate.lua 是否仍在殭屍轉成強盜時 setVariable(\"Bandit\", true)、移除時設回 false；新增高於 42.21 的版本目錄要改看那一份。",
-      "acked_time_updated": 1793832710,
+      "acked_time_updated": 1794172617,
       "acked_title": "[B42] Bandits NPC"
     },
     {
@@ -122,8 +122,8 @@
         }
       ],
       "recheck": "三處設 ALifeActor 的地方（MP 客戶端、單機、AIFence）是否仍在；變數名改了或改用別的標記，本包的 NPC 標記會全部消失；新增高於 42.20 的版本目錄要改看那一份。",
-      "acked_time_updated": 1792779018,
-      "acked_title": "Project A-Life [ALIFE NPCS]"
+      "acked_time_updated": 1794203232,
+      "acked_title": "Project A-Life [ALIFE NPCS] - 1.5 OUT NOW!"
     },
     {
       "wid": "3791152383",
