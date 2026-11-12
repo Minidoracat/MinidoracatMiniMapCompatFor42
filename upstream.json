@@ -63,14 +63,15 @@
       "name": "Bandits",
       "used_by": "NPC 標記：registerNpcTag(\"bandits\")，讀殭屍動畫變數 Bandit（MinidoracatMiniMapCompat.lua registerNpcIfActive）",
       "watch_files": [
-        "mods/Bandits/42.21/media/lua/client/BanditUpdate.lua"
+        "mods/Bandits/42.22/media/lua/client/BanditUpdate.lua"
       ],
       "contracts": [
         {
           "text": "id=Bandits2",
           "files": [
             "mods/Bandits/42.20/mod.info",
-            "mods/Bandits/42.21/mod.info"
+            "mods/Bandits/42.21/mod.info",
+            "mods/Bandits/42.22/mod.info"
           ],
           "why": "isModActive 用這個 mod id 判斷要不要登記"
         },
@@ -78,13 +79,14 @@
           "text": "setVariable(\"Bandit\", true)",
           "files": [
             "mods/Bandits/42.20/media/lua/client/BanditUpdate.lua",
-            "mods/Bandits/42.21/media/lua/client/BanditUpdate.lua"
+            "mods/Bandits/42.21/media/lua/client/BanditUpdate.lua",
+            "mods/Bandits/42.22/media/lua/client/BanditUpdate.lua"
           ],
           "why": "殭屍變成強盜時設的動畫變數；本包靠它認出強盜"
         }
       ],
-      "recheck": "BanditUpdate.lua 是否仍在殭屍轉成強盜時 setVariable(\"Bandit\", true)、移除時設回 false；新增高於 42.21 的版本目錄要改看那一份。",
-      "acked_time_updated": 1794172617,
+      "recheck": "BanditUpdate.lua 是否仍在殭屍轉成強盜時 setVariable(\"Bandit\", true)、移除時設回 false；新增高於 42.22 的版本目錄要改看那一份。",
+      "acked_time_updated": 1794252481,
       "acked_title": "[B42] Bandits NPC"
     },
     {
