@@ -18,7 +18,7 @@ Keep every Minidoracat MiniMap series mod up to date and restart the game after 
 [olist]
 [*] Subscribe to and enable the main MOD, this pack and the third-party MOD you want supported
 [*] Turn on animal icons in the main MOD's animal icon settings
-[*] “Dogs (loaded nearby)” and “Horses (loaded nearby)” appear in the species filter and can be toggled individually
+[*] “Dogs (loaded nearby)”, “Horses (loaded nearby)” and “Wolves (loaded nearby)” appear in the species filter and can be toggled individually
 [*] To see NPC colors, turn on the main MOD's “Show zombie dots on the mini-map”
 [/olist]
 
@@ -27,7 +27,7 @@ Keep every Minidoracat MiniMap series mod up to date and restart the game after 
 [*] [b]Supported MODs[/b]: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3268487204]Bandits[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3803984183]Project A-Life[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3791152383]Dynamic Outposts[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3789197845]Random Airdrops HF[/url]
 [*] [b]NPC colors[/b]: NPCs from Bandits and Project A-Life get their own color among the zombie dots
 [*] [b]Outposts and airdrops[/b]: outposts, infested areas and airdrop drop points also show on the mini-map
-[*] [b]Dedicated icons[/b]: dogs use the vanilla paw print or a colored dog icon; horses use a horse-head symbol or a colored horse icon
+[*] [b]Dedicated icons[/b]: dogs use the vanilla paw print or a colored dog icon; horses use a horse-head symbol or a colored horse icon; wolves use a wolf-head symbol or a colored wolf icon
 [*] [b]Markers left alone[/b]: third-party MODs' own markers keep working
 [*] [b]Inactive when absent[/b]: without the matching MOD, no extra options and no errors
 [*] [b]No third-party assets[/b]: contains no third-party code, models, textures or sounds

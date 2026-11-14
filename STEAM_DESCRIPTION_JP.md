@@ -18,7 +18,7 @@
 [olist]
 [*] 本体 MOD、本互換パック、対応させたいサードパーティ MOD を購読して有効化します
 [*] 本体 MOD の動物アイコン設定で動物アイコンを ON にします
-[*] 種別フィルターに「犬（周辺で読み込み済み）」「馬（周辺で読み込み済み）」が追加され、個別に切り替えられます
+[*] 種別フィルターに「犬（周辺で読み込み済み）」「馬（周辺で読み込み済み）」「オオカミ（周辺で読み込み済み）」が追加され、個別に切り替えられます
 [*] NPC の色分けを見るには、本体 MOD の「ミニマップにゾンビドットを表示」を ON にします
 [/olist]
 
@@ -27,7 +27,7 @@
 [*] [b]対応 MOD[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3268487204]Bandits[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3803984183]Project A-Life[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3791152383]Dynamic Outposts[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3789197845]Random Airdrops HF[/url]
 [*] [b]NPC の色分け[/b]：Bandits と Project A-Life の NPC をゾンビドットの中で専用の色で表示します
 [*] [b]前哨基地とエアドロップ[/b]：前哨基地、感染エリア、エアドロップの落下地点もミニマップに表示します
-[*] [b]専用アイコン[/b]：犬は標準の足跡かカラー犬アイコン、馬は馬頭シンボルかカラー馬アイコン
+[*] [b]専用アイコン[/b]：犬は標準の足跡かカラー犬アイコン、馬は馬頭シンボルかカラー馬アイコン、オオカミはオオカミ頭シンボルかカラーオオカミアイコン
 [*] [b]marker は置き換えない[/b]：サードパーティ MOD 独自の marker はそのまま動作します
 [*] [b]未導入なら何もしない[/b]：対応 MOD がなければ余計な設定やエラーを出しません
 [*] [b]他 MOD の素材は含まない[/b]：サードパーティ MOD のコード・モデル・テクスチャ・音声は含みません

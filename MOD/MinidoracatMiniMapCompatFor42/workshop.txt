@@ -20,7 +20,7 @@ description=[h2]🚀 Quick start[/h2]
 description=[olist]
 description=[*] Subscribe to and enable the main MOD, this pack and the third-party MOD you want supported
 description=[*] Turn on animal icons in the main MOD's animal icon settings
-description=[*] “Dogs (loaded nearby)” and “Horses (loaded nearby)” appear in the species filter and can be toggled individually
+description=[*] “Dogs (loaded nearby)”, “Horses (loaded nearby)” and “Wolves (loaded nearby)” appear in the species filter and can be toggled individually
 description=[*] To see NPC colors, turn on the main MOD's “Show zombie dots on the mini-map”
 description=[/olist]
 description=
@@ -29,7 +29,7 @@ description=[list]
 description=[*] [b]Supported MODs[/b]: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3268487204]Bandits[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3803984183]Project A-Life[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3791152383]Dynamic Outposts[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3789197845]Random Airdrops HF[/url]
 description=[*] [b]NPC colors[/b]: NPCs from Bandits and Project A-Life get their own color among the zombie dots
 description=[*] [b]Outposts and airdrops[/b]: outposts, infested areas and airdrop drop points also show on the mini-map
-description=[*] [b]Dedicated icons[/b]: dogs use the vanilla paw print or a colored dog icon; horses use a horse-head symbol or a colored horse icon
+description=[*] [b]Dedicated icons[/b]: dogs use the vanilla paw print or a colored dog icon; horses use a horse-head symbol or a colored horse icon; wolves use a wolf-head symbol or a colored wolf icon
 description=[*] [b]Markers left alone[/b]: third-party MODs' own markers keep working
 description=[*] [b]Inactive when absent[/b]: without the matching MOD, no extra options and no errors
 description=[*] [b]No third-party assets[/b]: contains no third-party code, models, textures or sounds

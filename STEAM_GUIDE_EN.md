@@ -1,7 +1,7 @@
 <!-- 指南網址：https://steamcommunity.com/sharedfiles/filedetails/?id=3817848926 -->
 <!-- Steam guide source (English): the full reference for this mod; the Workshop description only summarizes, requests stay in the original thread. Format and sync: pz-family-docs/release.md「完整說明：Steam 指南」 -->
 <!-- 標題：📖 MiniMap - MOD Compatibility Guide: Supported Mods, Multiplayer & FAQ -->
-<!-- 摘要：Illustrated guide to the Minidoracat MiniMap MOD Compatibility pack: which third-party mods it supports, what dogs and horses actually do on the map, NPC colors for Bandits and Project A-Life, map markers for Dynamic Outposts outposts and Random Airdrops airdrops, multiplayer notes, FAQ, original authors and asset boundary, and how support requests are evaluated. -->
+<!-- 摘要：Illustrated guide to the Minidoracat MiniMap MOD Compatibility pack: which third-party mods it supports, what dogs, wolves and horses actually do on the map, NPC colors for Bandits and Project A-Life, map markers for Dynamic Outposts outposts and Random Airdrops airdrops, multiplayer notes, FAQ, original authors and asset boundary, and how support requests are evaluated. -->
 === 🚀 Quick start
 [b]繁體中文版：[/b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817848780]小地圖 - MOD 相容包 完整說明[/url]
 
@@ -10,7 +10,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411
 [olist]
 [*] [b]Subscribe and enable[/b]: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]Minidoracat MiniMap[/url] (main mod), this pack, and the third-party mod you want supported. In multiplayer, the server must enable all three.
 [*] [b]Turn on animal icons[/b]: in the main mod's animal icon settings (they are off by default).
-[*] [b]Toggle each one[/b]: "Dogs (loaded nearby)" and "Horses (loaded nearby)" appear in the species filter.
+[*] [b]Toggle each one[/b]: "Dogs (loaded nearby)", "Horses (loaded nearby)" and "Wolves (loaded nearby)" appear in the species filter.
 [*] [b]NPC colors[/b]: turn on the main mod's "Show zombie dots on the mini-map" (off by default), and NPCs from Bandits and Project A-Life are drawn in their own color among the zombie dots.
 [*] [b]Outposts and airdrops[/b]: nothing to set up; with Dynamic Outposts or Random Airdrops HF enabled they show on the mini-map.
 [/olist]
@@ -21,7 +21,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411
 === 🧰 Currently supported
 [table]
 [tr][th]Third-party mod[/th][th]Mod ID[/th][th]What it does on the map[/th][th]Icons or color[/th][/tr]
-[tr][td][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs [ALPHA][/url][/td][td]CompanionDogs[/td][td]Adds dog to the species filter[/td][td]Vanilla paw-print symbol, this pack's colored dog icon[/td][/tr]
+[tr][td][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs [ALPHA][/url][/td][td]CompanionDogs[/td][td]Adds dog and wolf to the species filter[/td][td]Dogs: vanilla paw-print symbol, this pack's colored dog icon; wolves: this pack's wolf-head symbol and colored wolf icon[/td][/tr]
 [tr][td][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod [B42.14+/MP SOON][/url][/td][td]Horse[/td][td]Adds horse to the species filter[/td][td]This pack's horse-head symbol and colored horse icon[/td][/tr]
 [tr][td][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3268487204][B42] Bandits NPC[/url][/td][td]Bandits2[/td][td]Colors its NPCs among the zombie dots[/td][td]Sky blue by default[/td][/tr]
 [tr][td][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3803984183]Project A-Life [ALIFE NPCS][/url][/td][td]ProjectALifeNPCs[/td][td]Colors its NPCs among the zombie dots[/td][td]Green by default (sky blue when it is the only one enabled)[/td][/tr]
@@ -37,7 +37,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411
 [list]
 [*] [b]Original authors[/b]: Companion Dogs, [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url], Bandits, Project A-Life, Dynamic Outposts and Random Airdrops HF belong to their original authors.
 [*] [b]Requires the original mods[/b]: this pack does not copy or repackage their code, models, textures, or sounds.
-[*] [b]Original assets[/b]: the colored dog and horse icons, the horse-head symbol and the airdrop and infested-point icons were made for this compatibility pack; outpost icons reuse the main mod's resource point icons. NPC colors use no images.
+[*] [b]Original assets[/b]: the colored dog, horse and wolf icons, the horse-head and wolf-head symbols, and the airdrop and infested-point icons were made for this compatibility pack; outpost icons reuse the main mod's resource point icons. NPC colors use no images.
 [/list]
 === 🧰 Companion Dogs
 {{img:01-symbol-en.jpg}}
@@ -50,6 +50,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411
 [*] [b]No extra layer by default[/b]: animal icons in the main mod are off by default, so no extra generic dog icon is drawn.
 [*] [b]Only want Companion Dogs' markers?[/b] Untick "Dogs" in the main mod's animal icon species filter.
 [*] [b]Never hides the whole group[/b]: the [b]dog[/b] group can include both companion and stray dogs, so you decide in the filter.
+[*] [b]Wolves[/b]: Companion Dogs 0.9.0 and later has wolves that attack players (with the sandbox option "Aggressive animals" on, wolf packs appear in forests). Nearby loaded animals in the [b]wolf[/b] group appear under a separate "Wolves (loaded nearby)" filter entry, using this pack's original wolf-head symbol (symbol style) or colored wolf icon (colored style); untick "Wolves" to hide them. With an older Companion Dogs that has no wolves, the "Wolves" entry still appears but shows nothing.
 [/list]
 === 🧰 Horse Mod
 {{img:02-item-en.jpg}}
@@ -102,13 +103,14 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411
 [*] [b]Upstream limits stay[/b]: this compatibility feature does not change or bypass those upstream limitations.
 [/list]
 === ❓ FAQ
-[h3]I installed the pack but see no dogs or horses on the map?[/h3]
+[h3]I installed the pack but see no dogs, horses or wolves on the map?[/h3]
 [list]
 [*] Make sure the main mod's animal icons are on (they are off by default).
-[*] Make sure "Dogs"/"Horses" are ticked in the species filter.
+[*] Make sure "Dogs"/"Horses"/"Wolves" are ticked in the species filter.
+[*] Wolves need Companion Dogs 0.9.0 or later, and only appear in forests with the sandbox option "Aggressive animals" on.
 [*] Only animals loaded near you are shown.
 [/list]
-[h3]There is no "Dogs" or "Horses" entry in the filter?[/h3]
+[h3]There is no "Dogs", "Horses" or "Wolves" entry in the filter?[/h3]
 [list]
 [*] The matching third-party mod is not enabled.
 [*] In multiplayer, the server has to enable it.

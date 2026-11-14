@@ -12,7 +12,7 @@ Random Airdrops HF 的空投畫成地圖標記。不複製第三方程式或素�
 
 | 第三方 MOD | Workshop | Mod ID | 提供的相容功能 |
 | --- | --- | --- | --- |
-| Companion Dogs [ALPHA] | [3740052292](https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292) | `CompanionDogs` | 將 `dog` 加入物種篩選；符號風格使用原版爪印，彩圖風格使用本包狗圖 |
+| Companion Dogs [ALPHA] | [3740052292](https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292) | `CompanionDogs` | 將 `dog` 與 `wolf` 加入物種篩選；狗的符號風格使用原版爪印，彩圖風格使用本包狗圖；狼使用本包自製的狼頭符號與彩色狼圖 |
 | Horse Mod [B42.14+/MP SOON] | [3661336777](https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777) | `Horse` | 將 `horse` 加入物種篩選；提供本包自製的馬符號與彩圖 |
 | [B42] Bandits NPC | [3268487204](https://steamcommunity.com/sharedfiles/filedetails/?id=3268487204) | `Bandits2` | 殭屍點位裡的 Bandits NPC 換成自己的顏色（預設天藍） |
 | Project A-Life [ALIFE NPCS] | [3803984183](https://steamcommunity.com/sharedfiles/filedetails/?id=3803984183) | `ProjectALifeNPCs` | 殭屍點位裡的 A-Life NPC 換成自己的顏色（預設綠；只啟用它時是天藍） |
@@ -28,6 +28,9 @@ Random Airdrops HF 的空投畫成地圖標記。不複製第三方程式或素�
 - 主 MOD 原本就會以爪印備援未知群組；本相容包新增的是經驗證的「狗」名稱與獨立篩選開關。
 - 若只想保留 Companion Dogs 自己的 marker，可在主 MOD「動物圖標」物種篩選取消「狗」。
 - `dog` 同時可能包含 companion 與 stray，因此本相容包不會擅自隱藏整個群組。
+- Companion Dogs 0.9.0 起有會攻擊玩家的狼（沙盒「Aggressive animals」開啟時狼群出現在森林）。附近已載入且
+  `group=wolf` 的狼會出現在獨立「狼」篩選項，符號風格用本包狼頭符號、彩圖風格用本包彩色狼圖；可在篩選個別取消「狼」。
+- Companion Dogs 舊版沒有狼時，篩選仍會多一格「狼」，但不會有東西。
 
 ### Horse Mod 的顯示行為
 
@@ -116,8 +119,8 @@ MinidoracatMiniMapCompatFor42/
         ├── lua/
         │   ├── client/MinidoracatMiniMapCompat.lua
         │   └── shared/Translate/<16 個語系：AR,CH,CN,DE,EN,ES,ES_CL,ES_MX,FR,JP,KO,PL,PT,PTBR,RU,TR>/UI.json
-        ├── textures/Item_MinidoracatMiniMapCompat_{Dog,Horse}.png
-        └── ui/MinidoracatMiniMapCompat/{map_horse,marker_disc,infested,airdrop}.png
+        ├── textures/Item_MinidoracatMiniMapCompat_{Dog,Horse,Wolf}.png
+        └── ui/MinidoracatMiniMapCompat/{map_horse,map_wolf,marker_disc,infested,airdrop}.png
 ```
 
 ## 測試

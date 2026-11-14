@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased]
+
+### 新增
+
+- **支援 Companion Dogs 的狼**：Companion Dogs 0.9.0 加入會攻擊玩家的狼。啟用 Companion Dogs 時，動物物種篩選多一格「狼（附近已載入）」，可以單獨開關；符號風格用狼頭符號，彩圖風格用彩色狼圖。之前狼和不認得的動物一樣只畫成腳印，也關不掉。和狗一樣，要先開主 MOD 的動物圖標，而且只顯示附近已載入的狼。Companion Dogs 還沒更新到 0.9.0 時，篩選會多這一格但沒有狼可顯示。
+
+> 技術要點：`registerAnimalGroup` 多登記 group `wolf`（Mod ID 仍是 `CompanionDogs`），符號 `media/ui/MinidoracatMiniMapCompat/map_wolf.png`、彩圖 `media/textures/Item_MinidoracatMiniMapCompat_Wolf.png`，兩張都是本包自製。登記順序是狗、狼、馬。
+
 ## [42.21.0-0.4.0] - 2026-11-08
 
 ### 新增

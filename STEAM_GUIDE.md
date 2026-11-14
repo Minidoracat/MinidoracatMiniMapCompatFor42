@@ -1,7 +1,7 @@
 <!-- 指南網址：https://steamcommunity.com/sharedfiles/filedetails/?id=3817848780 -->
 <!-- Steam 指南稿源（繁中）：MOD 的完整說明以本指南為準，簡介只放摘要；許願留在原說明串。格式與同步方式見 pz-family-docs/release.md「完整說明：Steam 指南」 -->
 <!-- 標題：📖 小地圖 - MOD 相容包 完整說明：支援的 MOD、多人注意與常見問題 -->
-<!-- 摘要：Minidoracat 小地圖 MOD 相容包的圖文說明：支援哪些第三方 MOD、狗與馬在地圖上的實際行為、Bandits 與 Project A-Life 的 NPC 換色、Dynamic Outposts 前哨站與 Random Airdrops 空投的地圖標記、多人注意事項、常見問題、原作者與素材邊界，以及支援新 MOD 的評估原則。 -->
+<!-- 摘要：Minidoracat 小地圖 MOD 相容包的圖文說明：支援哪些第三方 MOD、狗、狼與馬在地圖上的實際行為、Bandits 與 Project A-Life 的 NPC 換色、Dynamic Outposts 前哨站與 Random Airdrops 空投的地圖標記、多人注意事項、常見問題、原作者與素材邊界，以及支援新 MOD 的評估原則。 -->
 === 🚀 快速上手
 [b]English version:[/b] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817848926]MiniMap - MOD Compatibility Guide[/url]
 
@@ -10,7 +10,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411
 [olist]
 [*] [b]訂閱並啟用[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3763913359]Minidoracat MiniMap[/url]（主 MOD）、本相容包，以及要支援的第三方 MOD。多人時伺服器三者都要啟用。
 [*] [b]開啟動物圖標[/b]：在主 MOD 的動物圖標設定中開啟（預設是關閉的）。
-[*] [b]個別開關[/b]：物種篩選會出現「狗（附近已載入）」「馬（附近已載入）」。
+[*] [b]個別開關[/b]：物種篩選會出現「狗（附近已載入）」「馬（附近已載入）」「狼（附近已載入）」。
 [*] [b]NPC 換色[/b]：開啟主 MOD 的「在小地圖顯示殭屍點位」（預設關），Bandits 與 Project A-Life 的 NPC 就會在殭屍點位裡用自己的顏色。
 [*] [b]前哨站與空投[/b]：不用設定，啟用 Dynamic Outposts 或 Random Airdrops HF 後就會畫在小地圖。
 [/olist]
@@ -21,7 +21,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411
 === 🧰 目前支援
 [table]
 [tr][th]第三方 MOD[/th][th]Mod ID[/th][th]地圖上的效果[/th][th]圖標或顏色[/th][/tr]
-[tr][td][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs [ALPHA][/url][/td][td]CompanionDogs[/td][td]物種篩選加入 dog[/td][td]原版爪印符號、本包彩色狗圖[/td][/tr]
+[tr][td][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs [ALPHA][/url][/td][td]CompanionDogs[/td][td]物種篩選加入 dog、wolf[/td][td]狗：原版爪印符號、本包彩色狗圖；狼：本包狼頭符號、彩色狼圖[/td][/tr]
 [tr][td][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod [B42.14+/MP SOON][/url][/td][td]Horse[/td][td]物種篩選加入 horse[/td][td]本包馬頭符號、彩色馬圖[/td][/tr]
 [tr][td][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3268487204][B42] Bandits NPC[/url][/td][td]Bandits2[/td][td]殭屍點位裡的 NPC 換色[/td][td]預設天藍[/td][/tr]
 [tr][td][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3803984183]Project A-Life [ALIFE NPCS][/url][/td][td]ProjectALifeNPCs[/td][td]殭屍點位裡的 NPC 換色[/td][td]預設綠（只啟用它時是天藍）[/td][/tr]
@@ -37,7 +37,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411
 [list]
 [*] [b]原作者[/b]：Companion Dogs、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url]、Bandits、Project A-Life、Dynamic Outposts 與 Random Airdrops HF 分屬各自的原作者（團隊）。
 [*] [b]必須搭配原始 MOD[/b]：本包不複製或重包第三方 MOD 的程式、模型、貼圖或音效。
-[*] [b]自製素材[/b]：狗與馬的彩圖、馬頭符號、空投與感染點圖示都是本相容包自行製作的；前哨站圖示借用主 MOD 的資源點圖示。NPC 換色不用任何圖片。
+[*] [b]自製素材[/b]：狗、馬與狼的彩圖，馬頭與狼頭符號，空投與感染點圖示都是本相容包自行製作的；前哨站圖示借用主 MOD 的資源點圖示。NPC 換色不用任何圖片。
 [/list]
 === 🧰 Companion Dogs
 {{img:01-symbol-zh.jpg}}
@@ -50,6 +50,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411
 [*] [b]預設不多畫一層[/b]：主 MOD 的動物圖標預設關閉，所以預設不會多畫泛用狗圖標。
 [*] [b]只想保留 Companion Dogs 的 marker[/b]：在主 MOD「動物圖標」物種篩選取消「狗」。
 [*] [b]不隱藏整個群組[/b]：[b]dog[/b] 群組可能同時包含同伴狗與流浪狗，要不要顯示由你在篩選中決定。
+[*] [b]狼[/b]：Companion Dogs 0.9.0 起有會攻擊玩家的狼（沙盒「Aggressive animals」開啟時狼群出現在森林）。附近已載入、屬於 [b]wolf[/b] 群組的狼會出現在獨立的「狼（附近已載入）」篩選項，符號風格用本包自製的狼頭符號，彩圖風格用本包自製的彩色狼圖；不想看可個別取消「狼」。Companion Dogs 舊版沒有狼時，篩選仍會多一格「狼」，但不會有東西。
 [/list]
 === 🧰 Horse Mod
 {{img:02-item-zh.jpg}}
@@ -102,13 +103,14 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3765182411
 [*] [b]不繞過上游限制[/b]：本相容功能不會改變或繞過 Horse Mod 的多人限制。
 [/list]
 === ❓ 常見問題
-[h3]裝了相容包，地圖上卻沒看到狗或馬？[/h3]
+[h3]裝了相容包，地圖上卻沒看到狗、馬或狼？[/h3]
 [list]
 [*] 先確認主 MOD 的動物圖標有開啟（預設關閉）。
-[*] 確認物種篩選中「狗」「馬」沒有被取消。
+[*] 確認物種篩選中「狗」「馬」「狼」沒有被取消。
+[*] 狼要 Companion Dogs 0.9.0 以上，且沙盒「Aggressive animals」開啟才會出現在森林。
 [*] 只會顯示你附近已載入的動物。
 [/list]
-[h3]篩選裡沒有「狗」或「馬」選項？[/h3]
+[h3]篩選裡沒有「狗」「馬」或「狼」選項？[/h3]
 [list]
 [*] 對應的第三方 MOD 沒有啟用。
 [*] 多人時要由伺服器啟用。

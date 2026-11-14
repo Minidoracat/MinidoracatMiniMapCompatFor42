@@ -18,7 +18,7 @@
 [olist]
 [*] 订阅并启用主 MOD、本兼容包与要支持的第三方 MOD
 [*] 在主 MOD 的动物图标设置中打开动物图标
-[*] 物种筛选会出现「狗（附近已加载）」「马（附近已加载）」，可分别开关
+[*] 物种筛选会出现「狗（附近已加载）」「马（附近已加载）」「狼（附近已加载）」，可分别开关
 [*] 要看 NPC 换色，打开主 MOD 的「在小地图显示丧尸点位」
 [/olist]
 
@@ -27,7 +27,7 @@
 [*] [b]支持的 MOD[/b]：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292]Companion Dogs[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777]Horse Mod[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3268487204]Bandits[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3803984183]Project A-Life[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3791152383]Dynamic Outposts[/url]、[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3789197845]Random Airdrops HF[/url]
 [*] [b]NPC 换色[/b]：Bandits 与 Project A-Life 的 NPC 在丧尸点位里换成各自的颜色
 [*] [b]前哨站与空投[/b]：前哨站、感染点与空投落点也画在小地图
-[*] [b]专属图标[/b]：狗用原版爪印或彩色狗图，马用马头符号或彩色马图
+[*] [b]专属图标[/b]：狗用原版爪印或彩色狗图，马用马头符号或彩色马图，狼用狼头符号或彩色狼图
 [*] [b]不接管 marker[/b]：第三方 MOD 自己的 marker 照常工作
 [*] [b]没装就不生效[/b]：没装对应 MOD 时不增加选项，也不产生错误
 [*] [b]不含第三方素材[/b]：不含第三方 MOD 的代码、模型、贴图或音效
