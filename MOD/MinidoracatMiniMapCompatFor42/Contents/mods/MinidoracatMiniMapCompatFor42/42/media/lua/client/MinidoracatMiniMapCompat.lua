@@ -44,6 +44,10 @@ end
 
 registerIfActive("CompanionDogs", "dog", "UI_MinidoracatMiniMapCompat_Dog", nil,
     "media/textures/Item_MinidoracatMiniMapCompat_Dog.png")
+-- Companion Dogs 0.9.0 起的狼是另一個 group；舊版沒有狼時只是多一格沒東西可篩的選項
+registerIfActive("CompanionDogs", "wolf", "UI_MinidoracatMiniMapCompat_Wolf",
+    "media/ui/MinidoracatMiniMapCompat/map_wolf.png",
+    "media/textures/Item_MinidoracatMiniMapCompat_Wolf.png")
 registerIfActive("Horse", "horse", "UI_MinidoracatMiniMapCompat_Horse",
     "media/ui/MinidoracatMiniMapCompat/map_horse.png",
     "media/textures/Item_MinidoracatMiniMapCompat_Horse.png")

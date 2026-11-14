@@ -5,9 +5,10 @@
       "wid": "3740052292",
       "mod_id": "CompanionDogs",
       "name": "Companion Dogs",
-      "used_by": "動物 group 登記：registerAnimalGroup(\"dog\")（MinidoracatMiniMapCompat.lua registerIfActive）",
+      "used_by": "動物 group 登記：registerAnimalGroup(\"dog\") 與 registerAnimalGroup(\"wolf\")（MinidoracatMiniMapCompat.lua registerIfActive）",
       "watch_files": [
-        "mods/CompanionDogs/42/media/lua/shared/Definitions/animal/DogDefinitions.lua"
+        "mods/CompanionDogs/42/media/lua/shared/Definitions/animal/DogDefinitions.lua",
+        "mods/CompanionDogs/42/media/lua/shared/Definitions/animal/WolfDefinitions.lua"
       ],
       "contracts": [
         {
@@ -23,9 +24,16 @@
             "mods/CompanionDogs/42/media/lua/shared/Definitions/animal/DogDefinitions.lua"
           ],
           "why": "本包登記的動物 group 名稱；改名小地圖就認不得狗"
+        },
+        {
+          "text": "wolfmale.group = \"wolf\"",
+          "files": [
+            "mods/CompanionDogs/42/media/lua/shared/Definitions/animal/WolfDefinitions.lua"
+          ],
+          "why": "本包登記的狼 group 名稱（0.9.0 起）；改名「狼」篩選就篩不到"
         }
       ],
-      "recheck": "mod id 與 AnimalDefinitions 裡狗的 group 是否仍是 dog；新增其他狗種時確認也走同一個 group。",
+      "recheck": "mod id 與 AnimalDefinitions 裡狗的 group 是否仍是 dog、狼（wolfpup／wolffemale／wolfmale）是否仍是 wolf；新增其他動物時看它用哪個 group。",
       "acked_time_updated": 1794534595,
       "acked_title": "Companion Dogs [ALPHA]"
     },

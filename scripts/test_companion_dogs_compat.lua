@@ -54,13 +54,18 @@ assert(#messages == 0, "受支援 MOD 未啟用時應安靜 no-op")
 
 registerCalls = {}
 run({ "MinidoracatMiniMapFor42", "CompanionDogs" }, api)
-assert(#registerCalls == 1, "CompanionDogs 啟用時應只註冊一次")
+assert(#registerCalls == 2, "CompanionDogs 啟用時應註冊狗與狼各一次")
 assert(registerCalls[1][1] == "MinidoracatMiniMapCompatFor42"
     and registerCalls[1][2] == "dog"
     and registerCalls[1][3] == "UI_MinidoracatMiniMapCompat_Dog"
     and registerCalls[1][4] == nil
     and registerCalls[1][5] == "media/textures/Item_MinidoracatMiniMapCompat_Dog.png",
     "CompanionDogs 註冊參數錯誤")
+assert(registerCalls[2][2] == "wolf"
+    and registerCalls[2][3] == "UI_MinidoracatMiniMapCompat_Wolf"
+    and registerCalls[2][4] == "media/ui/MinidoracatMiniMapCompat/map_wolf.png"
+    and registerCalls[2][5] == "media/textures/Item_MinidoracatMiniMapCompat_Wolf.png",
+    "CompanionDogs 的狼註冊參數錯誤")
 
 registerCalls = {}
 run({ "MinidoracatMiniMapFor42", "Horse" }, api)
@@ -74,7 +79,8 @@ assert(registerCalls[1][1] == "MinidoracatMiniMapCompatFor42"
 
 registerCalls = {}
 run({ "CompanionDogs", "Horse" }, api)
-assert(#registerCalls == 2 and registerCalls[1][2] == "dog" and registerCalls[2][2] == "horse",
+assert(#registerCalls == 3 and registerCalls[1][2] == "dog" and registerCalls[2][2] == "wolf"
+    and registerCalls[3][2] == "horse",
     "兩個上游 MOD 同時啟用時應各註冊一次且順序固定")
 
 messages = run({ "CompanionDogs", "Horse" }, nil)
@@ -119,7 +125,7 @@ for name, old in pairs({
 }) do
     npcCalls, registerCalls = {}, {}
     messages = run(allMods, old)
-    assert(#registerCalls == 2 and #npcCalls == 0, name .. "：動物應照登記、NPC 不登記")
+    assert(#registerCalls == 3 and #npcCalls == 0, name .. "：動物應照登記、NPC 不登記")
     assert(#messages == 1 and messages[1]:find("registerNpcTag", 1, true), name .. "：NPC API 不足應只 log 一次")
 end
 
