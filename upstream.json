@@ -26,7 +26,7 @@
         }
       ],
       "recheck": "mod id 與 AnimalDefinitions 裡狗的 group 是否仍是 dog；新增其他狗種時確認也走同一個 group。",
-      "acked_time_updated": 1791251330,
+      "acked_time_updated": 1794534595,
       "acked_title": "Companion Dogs [ALPHA]"
     },
     {
@@ -63,7 +63,8 @@
       "name": "Bandits",
       "used_by": "NPC 標記：registerNpcTag(\"bandits\")，讀殭屍動畫變數 Bandit（MinidoracatMiniMapCompat.lua registerNpcIfActive）",
       "watch_files": [
-        "mods/Bandits/42.22/media/lua/client/BanditUpdate.lua"
+        "mods/Bandits/42.22/media/lua/client/BanditUpdate.lua",
+        "mods/Bandits/42.22/media/lua/shared/Bandit.lua"
       ],
       "contracts": [
         {
@@ -80,13 +81,14 @@
           "files": [
             "mods/Bandits/42.20/media/lua/client/BanditUpdate.lua",
             "mods/Bandits/42.21/media/lua/client/BanditUpdate.lua",
-            "mods/Bandits/42.22/media/lua/client/BanditUpdate.lua"
+            "mods/Bandits/42.22/media/lua/client/BanditUpdate.lua",
+            "mods/Bandits/42.22/media/lua/shared/Bandit.lua"
           ],
           "why": "殭屍變成強盜時設的動畫變數；本包靠它認出強盜"
         }
       ],
-      "recheck": "BanditUpdate.lua 是否仍在殭屍轉成強盜時 setVariable(\"Bandit\", true)、移除時設回 false；新增高於 42.22 的版本目錄要改看那一份。",
-      "acked_time_updated": 1794252481,
+      "recheck": "42.22 的 Bandit.Banditize（shared/Bandit.lua）是否仍 setVariable(\"Bandit\", true)、Bandit.Zombify 與死亡處理設回 false，BanditUpdate.lua 是否仍在 OnZombieUpdate 對有 brain 的殭屍呼叫 Banditize；新增高於 42.22 的版本目錄要改看那一份。",
+      "acked_time_updated": 1794654454,
       "acked_title": "[B42] Bandits NPC"
     },
     {
@@ -124,8 +126,8 @@
         }
       ],
       "recheck": "三處設 ALifeActor 的地方（MP 客戶端、單機、AIFence）是否仍在；變數名改了或改用別的標記，本包的 NPC 標記會全部消失；新增高於 42.20 的版本目錄要改看那一份。",
-      "acked_time_updated": 1794203232,
-      "acked_title": "Project A-Life [ALIFE NPCS] - 1.5 OUT NOW!"
+      "acked_time_updated": 1794618756,
+      "acked_title": "Project A-Life [ALIFE NPCS]"
     },
     {
       "wid": "3791152383",
